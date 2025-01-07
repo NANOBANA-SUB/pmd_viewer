@@ -1,0 +1,61 @@
+# ビルドディレクトリを無視
+build/
+
+# 一時ファイルや中間ファイル
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.lib
+*.a
+*.lo
+*.la
+
+# 実行ファイル
+*.exe
+*.out
+*.app
+
+# IDE関連ファイル
+.vscode/
+.idea/
+*.code-workspace
+
+# OS固有ファイル
+.DS_Store
+Thumbs.db
+
+# CMake関連ファイル
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# ログファイル
+*.log
+
+# バックアップファイル
+*~
+*.bak
+*.tmp
+*.swp
+
+# ユーザー固有の設定ファイル
+*.user
+*.suo
+*.sln
+*.ncb
+*.VC.db
+*.VC.VC.opendb
+
+# 依存関係管理関連
+third_party/*
+
+# テストカバレッジデータ
+*.gcda
+*.gcno
+*.gcov
+
+# その他の一時ファイル
+tags
