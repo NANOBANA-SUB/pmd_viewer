@@ -25,3 +25,14 @@ void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVert
 
     file.close();
 }
+
+GLuint createVBO(const std::vector<PMDVertex>& vertices)
+{
+    GLuint vbo;
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(PMDVertex), vertices.data(), GL_STATIC_DRAW);
+
+    return vbo;
+}
