@@ -1,0 +1,7 @@
+[submodule "third_party/SDL2"]
+	path = third_party/SDL2
+	url = https://github.com/libsdl-org/SDL.git
+	branch = SDL2
+[submodule "third_party/glm"]
+	path = third_party/glm
+	url = https://github.com/g-truc/glm.git
