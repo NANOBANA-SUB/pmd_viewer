@@ -1,0 +1,1765 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.6.3+07e294721 for .NET Framework
+      2025/01/08 4:14:05 にビルドを開始しました。
+      
+      ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdC.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を作成しています。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' は、内部コマンドまたは外部コマンド、
+        操作可能なプログラムまたはバッチ ファイルとして認識されていません。
+        コマンド "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"" はコード 9009 で終了しました。
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:01.76
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/3.30.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.6.3+07e294721 for .NET Framework
+      2025/01/08 4:14:08 にビルドを開始しました。
+      
+      ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdCXX.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を作成しています。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' は、内部コマンドまたは外部コマンド、
+        操作可能なプログラムまたはバッチ ファイルとして認識されていません。
+        コマンド "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"" はコード 9009 で終了しました。
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\3.30.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:01.05
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/3.30.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-n8fzz0"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-n8fzz0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-n8fzz0'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_83d1d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:10 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n8fzz0\\cmTC_83d1d.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_83d1d.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n8fzz0\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_83d1d.dir\\Debug\\cmTC_83d1d.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_83d1d.dir\\Debug\\cmTC_83d1d.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_83d1d.dir\\Debug\\\\" /Fd"cmTC_83d1d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CMakeCCompilerABI.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_83d1d.dir\\Debug\\\\" /Fd"cmTC_83d1d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n8fzz0\\Debug\\cmTC_83d1d.exe" /INCREMENTAL /ILK:"cmTC_83d1d.dir\\Debug\\cmTC_83d1d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-n8fzz0/Debug/cmTC_83d1d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-n8fzz0/Debug/cmTC_83d1d.lib" /MACHINE:X64  /machine:x64 cmTC_83d1d.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_83d1d.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n8fzz0\\Debug\\cmTC_83d1d.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_83d1d.dir\\Debug\\cmTC_83d1d.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_83d1d.dir\\Debug\\cmTC_83d1d.tlog\\cmTC_83d1d.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n8fzz0\\cmTC_83d1d.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.57
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.36.32537.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d9jkv6"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d9jkv6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d9jkv6'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6cf92.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:11 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d9jkv6\\cmTC_6cf92.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_6cf92.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d9jkv6\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_6cf92.dir\\Debug\\cmTC_6cf92.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_6cf92.dir\\Debug\\cmTC_6cf92.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6cf92.dir\\Debug\\\\" /Fd"cmTC_6cf92.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CMakeCXXCompilerABI.cpp
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6cf92.dir\\Debug\\\\" /Fd"cmTC_6cf92.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d9jkv6\\Debug\\cmTC_6cf92.exe" /INCREMENTAL /ILK:"cmTC_6cf92.dir\\Debug\\cmTC_6cf92.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d9jkv6/Debug/cmTC_6cf92.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d9jkv6/Debug/cmTC_6cf92.lib" /MACHINE:X64  /machine:x64 cmTC_6cf92.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_6cf92.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d9jkv6\\Debug\\cmTC_6cf92.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_6cf92.dir\\Debug\\cmTC_6cf92.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_6cf92.dir\\Debug\\cmTC_6cf92.tlog\\cmTC_6cf92.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d9jkv6\\cmTC_6cf92.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.58
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.36.32537.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckSymbolExists.cmake:154 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "third_party/SDL2/CMakeLists.txt:84 (check_symbol_exists)"
+    checks:
+      - "Looking for __GLIBC__"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-dxp6pi"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-dxp6pi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "LIBC_IS_GLIBC"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-dxp6pi'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ab3db.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:12 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\cmTC_ab3db.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_ab3db.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_ab3db.dir\\Debug\\cmTC_ab3db.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_ab3db.dir\\Debug\\cmTC_ab3db.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab3db.dir\\Debug\\\\" /Fd"cmTC_ab3db.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\CheckSymbolExists.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckSymbolExists.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab3db.dir\\Debug\\\\" /Fd"cmTC_ab3db.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\CheckSymbolExists.c"
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\CheckSymbolExists.c(8,28): error C2065: '__GLIBC__': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\cmTC_ab3db.vcxproj]
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\cmTC_ab3db.vcxproj" (既定のターゲット) のビルドが終了しました -- 失敗。
+        
+        ビルドに失敗しました。
+        
+        "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\cmTC_ab3db.vcxproj" (既定のターゲット) (1) ->
+        (ClCompile ターゲット) -> 
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\CheckSymbolExists.c(8,28): error C2065: '__GLIBC__': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dxp6pi\\cmTC_ab3db.vcxproj]
+        
+            0 個の警告
+            1 エラー
+        
+        経過時間 00:00:00.39
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:28 (_internal_check_cpu_architecture)"
+      - "third_party/SDL2/CMakeLists.txt:141 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_X86"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-i7mbwi"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-i7mbwi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_X86"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-i7mbwi'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_407ff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:13 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\cmTC_407ff.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_407ff.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_407ff.dir\\Debug\\cmTC_407ff.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_407ff.dir\\Debug\\cmTC_407ff.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X86 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_407ff.dir\\Debug\\\\" /Fd"cmTC_407ff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          src.c
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\cmTC_407ff.vcxproj]
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\cmTC_407ff.vcxproj]
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X86 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_407ff.dir\\Debug\\\\" /Fd"cmTC_407ff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\src.c"
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\cmTC_407ff.vcxproj" (既定のターゲット) のビルドが終了しました -- 失敗。
+        
+        ビルドに失敗しました。
+        
+        "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\cmTC_407ff.vcxproj" (既定のターゲット) (1) ->
+        (ClCompile ターゲット) -> 
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\cmTC_407ff.vcxproj]
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i7mbwi\\cmTC_407ff.vcxproj]
+        
+            0 個の警告
+            2 エラー
+        
+        経過時間 00:00:00.37
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:30 (_internal_check_cpu_architecture)"
+      - "third_party/SDL2/CMakeLists.txt:142 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_X64"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ank0rs"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ank0rs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_X64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ank0rs'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e815d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:14 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ank0rs\\cmTC_e815d.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_e815d.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ank0rs\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_e815d.dir\\Debug\\cmTC_e815d.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_e815d.dir\\Debug\\cmTC_e815d.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X64 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e815d.dir\\Debug\\\\" /Fd"cmTC_e815d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ank0rs\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X64 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e815d.dir\\Debug\\\\" /Fd"cmTC_e815d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ank0rs\\src.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ank0rs\\Debug\\cmTC_e815d.exe" /INCREMENTAL /ILK:"cmTC_e815d.dir\\Debug\\cmTC_e815d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ank0rs/Debug/cmTC_e815d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ank0rs/Debug/cmTC_e815d.lib" /MACHINE:X64  /machine:x64 cmTC_e815d.dir\\Debug\\src.obj
+          cmTC_e815d.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ank0rs\\Debug\\cmTC_e815d.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_e815d.dir\\Debug\\cmTC_e815d.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_e815d.dir\\Debug\\cmTC_e815d.tlog\\cmTC_e815d.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ank0rs\\cmTC_e815d.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.57
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:32 (_internal_check_cpu_architecture)"
+      - "third_party/SDL2/CMakeLists.txt:143 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM32"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-w0otog"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-w0otog"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM32"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-w0otog'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9c95e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:15 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\cmTC_9c95e.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_9c95e.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_9c95e.dir\\Debug\\cmTC_9c95e.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_9c95e.dir\\Debug\\cmTC_9c95e.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM32 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9c95e.dir\\Debug\\\\" /Fd"cmTC_9c95e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          src.c
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\cmTC_9c95e.vcxproj]
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\cmTC_9c95e.vcxproj]
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM32 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9c95e.dir\\Debug\\\\" /Fd"cmTC_9c95e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\src.c"
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\cmTC_9c95e.vcxproj" (既定のターゲット) のビルドが終了しました -- 失敗。
+        
+        ビルドに失敗しました。
+        
+        "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\cmTC_9c95e.vcxproj" (既定のターゲット) (1) ->
+        (ClCompile ターゲット) -> 
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\cmTC_9c95e.vcxproj]
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w0otog\\cmTC_9c95e.vcxproj]
+        
+            0 個の警告
+            2 エラー
+        
+        経過時間 00:00:00.37
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:34 (_internal_check_cpu_architecture)"
+      - "third_party/SDL2/CMakeLists.txt:144 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM64"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-9lmr2l"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-9lmr2l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-9lmr2l'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6caff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:15 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\cmTC_6caff.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_6caff.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_6caff.dir\\Debug\\cmTC_6caff.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_6caff.dir\\Debug\\cmTC_6caff.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM64 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6caff.dir\\Debug\\\\" /Fd"cmTC_6caff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          src.c
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\cmTC_6caff.vcxproj]
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\cmTC_6caff.vcxproj]
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM64 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6caff.dir\\Debug\\\\" /Fd"cmTC_6caff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\src.c"
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\cmTC_6caff.vcxproj" (既定のターゲット) のビルドが終了しました -- 失敗。
+        
+        ビルドに失敗しました。
+        
+        "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\cmTC_6caff.vcxproj" (既定のターゲット) (1) ->
+        (ClCompile ターゲット) -> 
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\cmTC_6caff.vcxproj]
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9lmr2l\\cmTC_6caff.vcxproj]
+        
+            0 個の警告
+            2 エラー
+        
+        経過時間 00:00:00.37
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:36 (_internal_check_cpu_architecture)"
+      - "third_party/SDL2/CMakeLists.txt:145 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM64EC"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-3v414d"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-3v414d"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM64EC"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-3v414d'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9af0f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:16 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\cmTC_9af0f.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_9af0f.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_9af0f.dir\\Debug\\cmTC_9af0f.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_9af0f.dir\\Debug\\cmTC_9af0f.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM64EC /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9af0f.dir\\Debug\\\\" /Fd"cmTC_9af0f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          src.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM64EC /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9af0f.dir\\Debug\\\\" /Fd"cmTC_9af0f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\src.c"
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\cmTC_9af0f.vcxproj]
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\cmTC_9af0f.vcxproj]
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\cmTC_9af0f.vcxproj" (既定のターゲット) のビルドが終了しました -- 失敗。
+        
+        ビルドに失敗しました。
+        
+        "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\cmTC_9af0f.vcxproj" (既定のターゲット) (1) ->
+        (ClCompile ターゲット) -> 
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\cmTC_9af0f.vcxproj]
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3v414d\\cmTC_9af0f.vcxproj]
+        
+            0 個の警告
+            2 エラー
+        
+        経過時間 00:00:00.36
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "third_party/SDL2/cmake/CheckCPUArchitecture.cmake:38 (_internal_check_cpu_architecture)"
+      - "third_party/SDL2/CMakeLists.txt:146 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_LOONGARCH64"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-rkm3hi"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-rkm3hi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_LOONGARCH64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-rkm3hi'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2ddfd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:17 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\cmTC_2ddfd.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_2ddfd.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_2ddfd.dir\\Debug\\cmTC_2ddfd.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_2ddfd.dir\\Debug\\cmTC_2ddfd.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_LOONGARCH64 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2ddfd.dir\\Debug\\\\" /Fd"cmTC_2ddfd.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\cmTC_2ddfd.vcxproj]
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_LOONGARCH64 /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2ddfd.dir\\Debug\\\\" /Fd"cmTC_2ddfd.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\src.c"
+        C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\cmTC_2ddfd.vcxproj]
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\cmTC_2ddfd.vcxproj" (既定のターゲット) のビルドが終了しました -- 失敗。
+        
+        ビルドに失敗しました。
+        
+        "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\cmTC_2ddfd.vcxproj" (既定のターゲット) (1) ->
+        (ClCompile ターゲット) -> 
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\src.c(8,1): error C2065: 'choke': 定義されていない識別子です。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\cmTC_2ddfd.vcxproj]
+          C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\src.c(8,1): error C2143: 構文エラー: ';' が '}' の前にありません。 [C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rkm3hi\\cmTC_2ddfd.vcxproj]
+        
+            0 個の警告
+            2 エラー
+        
+        経過時間 00:00:00.36
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1013 (check_include_file)"
+    checks:
+      - "Looking for immintrin.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-gbwuto"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-gbwuto"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_IMMINTRIN_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-gbwuto'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4f65b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:17 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gbwuto\\cmTC_4f65b.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_4f65b.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gbwuto\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_4f65b.dir\\Debug\\cmTC_4f65b.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_4f65b.dir\\Debug\\cmTC_4f65b.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4f65b.dir\\Debug\\\\" /Fd"cmTC_4f65b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gbwuto\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4f65b.dir\\Debug\\\\" /Fd"cmTC_4f65b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gbwuto\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gbwuto\\Debug\\cmTC_4f65b.exe" /INCREMENTAL /ILK:"cmTC_4f65b.dir\\Debug\\cmTC_4f65b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-gbwuto/Debug/cmTC_4f65b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-gbwuto/Debug/cmTC_4f65b.lib" /MACHINE:X64  /machine:x64 cmTC_4f65b.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_4f65b.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gbwuto\\Debug\\cmTC_4f65b.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_4f65b.dir\\Debug\\cmTC_4f65b.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_4f65b.dir\\Debug\\cmTC_4f65b.tlog\\cmTC_4f65b.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gbwuto\\cmTC_4f65b.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.61
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1176 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-tpyjmp"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-tpyjmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-tpyjmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_27e19.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:18 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpyjmp\\cmTC_27e19.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_27e19.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpyjmp\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_27e19.dir\\Debug\\cmTC_27e19.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_27e19.dir\\Debug\\cmTC_27e19.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_27e19.dir\\Debug\\\\" /Fd"cmTC_27e19.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpyjmp\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_27e19.dir\\Debug\\\\" /Fd"cmTC_27e19.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpyjmp\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpyjmp\\Debug\\cmTC_27e19.exe" /INCREMENTAL /ILK:"cmTC_27e19.dir\\Debug\\cmTC_27e19.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-tpyjmp/Debug/cmTC_27e19.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-tpyjmp/Debug/cmTC_27e19.lib" /MACHINE:X64  /machine:x64 cmTC_27e19.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_27e19.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpyjmp\\Debug\\cmTC_27e19.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_27e19.dir\\Debug\\cmTC_27e19.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_27e19.dir\\Debug\\cmTC_27e19.tlog\\cmTC_27e19.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpyjmp\\cmTC_27e19.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.57
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/CMakeLists.txt:1778 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_WIN32_CC"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-mjgksb"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-mjgksb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_WIN32_CC"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-mjgksb'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_830cf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:19 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjgksb\\cmTC_830cf.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_830cf.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjgksb\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_830cf.dir\\Debug\\cmTC_830cf.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_830cf.dir\\Debug\\cmTC_830cf.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WIN32_CC /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_830cf.dir\\Debug\\\\" /Fd"cmTC_830cf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjgksb\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          src.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WIN32_CC /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_830cf.dir\\Debug\\\\" /Fd"cmTC_830cf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjgksb\\src.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjgksb\\Debug\\cmTC_830cf.exe" /INCREMENTAL /ILK:"cmTC_830cf.dir\\Debug\\cmTC_830cf.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-mjgksb/Debug/cmTC_830cf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-mjgksb/Debug/cmTC_830cf.lib" /MACHINE:X64  /machine:x64 cmTC_830cf.dir\\Debug\\src.obj
+          cmTC_830cf.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjgksb\\Debug\\cmTC_830cf.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_830cf.dir\\Debug\\cmTC_830cf.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_830cf.dir\\Debug\\cmTC_830cf.tlog\\cmTC_830cf.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjgksb\\cmTC_830cf.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.88
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1813 (check_include_file)"
+    checks:
+      - "Looking for d3d9.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-wr2l0c"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-wr2l0c"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_D3D_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-wr2l0c'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_bd6a4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:20 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wr2l0c\\cmTC_bd6a4.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_bd6a4.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wr2l0c\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_bd6a4.dir\\Debug\\cmTC_bd6a4.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_bd6a4.dir\\Debug\\cmTC_bd6a4.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bd6a4.dir\\Debug\\\\" /Fd"cmTC_bd6a4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wr2l0c\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bd6a4.dir\\Debug\\\\" /Fd"cmTC_bd6a4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wr2l0c\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wr2l0c\\Debug\\cmTC_bd6a4.exe" /INCREMENTAL /ILK:"cmTC_bd6a4.dir\\Debug\\cmTC_bd6a4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-wr2l0c/Debug/cmTC_bd6a4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-wr2l0c/Debug/cmTC_bd6a4.lib" /MACHINE:X64  /machine:x64 cmTC_bd6a4.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_bd6a4.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wr2l0c\\Debug\\cmTC_bd6a4.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_bd6a4.dir\\Debug\\cmTC_bd6a4.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_bd6a4.dir\\Debug\\cmTC_bd6a4.tlog\\cmTC_bd6a4.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wr2l0c\\cmTC_bd6a4.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.85
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1814 (check_include_file)"
+    checks:
+      - "Looking for d3d11_1.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-kk73zu"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-kk73zu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_D3D11_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-kk73zu'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_06b90.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:21 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk73zu\\cmTC_06b90.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_06b90.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk73zu\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_06b90.dir\\Debug\\cmTC_06b90.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_06b90.dir\\Debug\\cmTC_06b90.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_06b90.dir\\Debug\\\\" /Fd"cmTC_06b90.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk73zu\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_06b90.dir\\Debug\\\\" /Fd"cmTC_06b90.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk73zu\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk73zu\\Debug\\cmTC_06b90.exe" /INCREMENTAL /ILK:"cmTC_06b90.dir\\Debug\\cmTC_06b90.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-kk73zu/Debug/cmTC_06b90.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-kk73zu/Debug/cmTC_06b90.lib" /MACHINE:X64  /machine:x64 cmTC_06b90.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_06b90.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk73zu\\Debug\\cmTC_06b90.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_06b90.dir\\Debug\\cmTC_06b90.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_06b90.dir\\Debug\\cmTC_06b90.tlog\\cmTC_06b90.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kk73zu\\cmTC_06b90.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.93
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/CMakeLists.txt:1815 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_D3D12_H"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t779ee"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t779ee"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_D3D12_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t779ee'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6a493.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:23 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t779ee\\cmTC_6a493.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_6a493.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t779ee\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_6a493.dir\\Debug\\cmTC_6a493.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_6a493.dir\\Debug\\cmTC_6a493.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_D3D12_H /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6a493.dir\\Debug\\\\" /Fd"cmTC_6a493.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t779ee\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_D3D12_H /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6a493.dir\\Debug\\\\" /Fd"cmTC_6a493.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t779ee\\src.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t779ee\\Debug\\cmTC_6a493.exe" /INCREMENTAL /ILK:"cmTC_6a493.dir\\Debug\\cmTC_6a493.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t779ee/Debug/cmTC_6a493.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t779ee/Debug/cmTC_6a493.lib" /MACHINE:X64  /machine:x64 cmTC_6a493.dir\\Debug\\src.obj
+          cmTC_6a493.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t779ee\\Debug\\cmTC_6a493.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_6a493.dir\\Debug\\cmTC_6a493.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_6a493.dir\\Debug\\cmTC_6a493.tlog\\cmTC_6a493.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t779ee\\cmTC_6a493.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.89
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1821 (check_include_file)"
+    checks:
+      - "Looking for ddraw.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-lffeb9"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-lffeb9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_DDRAW_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-lffeb9'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0f0cc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:24 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lffeb9\\cmTC_0f0cc.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_0f0cc.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lffeb9\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_0f0cc.dir\\Debug\\cmTC_0f0cc.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_0f0cc.dir\\Debug\\cmTC_0f0cc.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0f0cc.dir\\Debug\\\\" /Fd"cmTC_0f0cc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lffeb9\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CheckIncludeFile.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0f0cc.dir\\Debug\\\\" /Fd"cmTC_0f0cc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lffeb9\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lffeb9\\Debug\\cmTC_0f0cc.exe" /INCREMENTAL /ILK:"cmTC_0f0cc.dir\\Debug\\cmTC_0f0cc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-lffeb9/Debug/cmTC_0f0cc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-lffeb9/Debug/cmTC_0f0cc.lib" /MACHINE:X64  /machine:x64 cmTC_0f0cc.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_0f0cc.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lffeb9\\Debug\\cmTC_0f0cc.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_0f0cc.dir\\Debug\\cmTC_0f0cc.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_0f0cc.dir\\Debug\\cmTC_0f0cc.tlog\\cmTC_0f0cc.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lffeb9\\cmTC_0f0cc.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.87
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1822 (check_include_file)"
+    checks:
+      - "Looking for dsound.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-6wl0ir"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-6wl0ir"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_DSOUND_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-6wl0ir'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_95739.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:25 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wl0ir\\cmTC_95739.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_95739.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wl0ir\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_95739.dir\\Debug\\cmTC_95739.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_95739.dir\\Debug\\cmTC_95739.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_95739.dir\\Debug\\\\" /Fd"cmTC_95739.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wl0ir\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CheckIncludeFile.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_95739.dir\\Debug\\\\" /Fd"cmTC_95739.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wl0ir\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wl0ir\\Debug\\cmTC_95739.exe" /INCREMENTAL /ILK:"cmTC_95739.dir\\Debug\\cmTC_95739.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-6wl0ir/Debug/cmTC_95739.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-6wl0ir/Debug/cmTC_95739.lib" /MACHINE:X64  /machine:x64 cmTC_95739.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_95739.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wl0ir\\Debug\\cmTC_95739.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_95739.dir\\Debug\\cmTC_95739.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_95739.dir\\Debug\\cmTC_95739.tlog\\cmTC_95739.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wl0ir\\cmTC_95739.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.85
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1823 (check_include_file)"
+    checks:
+      - "Looking for dinput.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-4ae6b2"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-4ae6b2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_DINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-4ae6b2'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ba814.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:26 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4ae6b2\\cmTC_ba814.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_ba814.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4ae6b2\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_ba814.dir\\Debug\\cmTC_ba814.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_ba814.dir\\Debug\\cmTC_ba814.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ba814.dir\\Debug\\\\" /Fd"cmTC_ba814.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4ae6b2\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CheckIncludeFile.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ba814.dir\\Debug\\\\" /Fd"cmTC_ba814.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4ae6b2\\CheckIncludeFile.c"
+          C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22000.0\\um\\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4ae6b2\\Debug\\cmTC_ba814.exe" /INCREMENTAL /ILK:"cmTC_ba814.dir\\Debug\\cmTC_ba814.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-4ae6b2/Debug/cmTC_ba814.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-4ae6b2/Debug/cmTC_ba814.lib" /MACHINE:X64  /machine:x64 cmTC_ba814.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_ba814.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4ae6b2\\Debug\\cmTC_ba814.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_ba814.dir\\Debug\\cmTC_ba814.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_ba814.dir\\Debug\\cmTC_ba814.tlog\\cmTC_ba814.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4ae6b2\\cmTC_ba814.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.86
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1827 (check_include_file)"
+    checks:
+      - "Looking for dxgi.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-pii84g"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-pii84g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_DXGI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-pii84g'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_89c62.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:27 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pii84g\\cmTC_89c62.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_89c62.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pii84g\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_89c62.dir\\Debug\\cmTC_89c62.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_89c62.dir\\Debug\\cmTC_89c62.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_89c62.dir\\Debug\\\\" /Fd"cmTC_89c62.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pii84g\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_89c62.dir\\Debug\\\\" /Fd"cmTC_89c62.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pii84g\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pii84g\\Debug\\cmTC_89c62.exe" /INCREMENTAL /ILK:"cmTC_89c62.dir\\Debug\\cmTC_89c62.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-pii84g/Debug/cmTC_89c62.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-pii84g/Debug/cmTC_89c62.lib" /MACHINE:X64  /machine:x64 cmTC_89c62.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_89c62.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pii84g\\Debug\\cmTC_89c62.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_89c62.dir\\Debug\\cmTC_89c62.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_89c62.dir\\Debug\\cmTC_89c62.tlog\\cmTC_89c62.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pii84g\\cmTC_89c62.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.87
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/CMakeLists.txt:1841 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_XINPUT_H"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-i06dzo"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-i06dzo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_XINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-i06dzo'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2e7a4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:29 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i06dzo\\cmTC_2e7a4.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_2e7a4.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i06dzo\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_2e7a4.dir\\Debug\\cmTC_2e7a4.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_2e7a4.dir\\Debug\\cmTC_2e7a4.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_XINPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2e7a4.dir\\Debug\\\\" /Fd"cmTC_2e7a4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i06dzo\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_XINPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2e7a4.dir\\Debug\\\\" /Fd"cmTC_2e7a4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i06dzo\\src.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i06dzo\\Debug\\cmTC_2e7a4.exe" /INCREMENTAL /ILK:"cmTC_2e7a4.dir\\Debug\\cmTC_2e7a4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-i06dzo/Debug/cmTC_2e7a4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-i06dzo/Debug/cmTC_2e7a4.lib" /MACHINE:X64  /machine:x64 cmTC_2e7a4.dir\\Debug\\src.obj
+          cmTC_2e7a4.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i06dzo\\Debug\\cmTC_2e7a4.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_2e7a4.dir\\Debug\\cmTC_2e7a4.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_2e7a4.dir\\Debug\\cmTC_2e7a4.tlog\\cmTC_2e7a4.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i06dzo\\cmTC_2e7a4.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.85
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "third_party/SDL2/CMakeLists.txt:1845 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_WINDOWS_GAMING_INPUT_H"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t9npyr"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t9npyr"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_WINDOWS_GAMING_INPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t9npyr'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_680e2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:30 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t9npyr\\cmTC_680e2.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_680e2.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t9npyr\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_680e2.dir\\Debug\\cmTC_680e2.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_680e2.dir\\Debug\\cmTC_680e2.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WINDOWS_GAMING_INPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_680e2.dir\\Debug\\\\" /Fd"cmTC_680e2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t9npyr\\src.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          src.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WINDOWS_GAMING_INPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_680e2.dir\\Debug\\\\" /Fd"cmTC_680e2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t9npyr\\src.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t9npyr\\Debug\\cmTC_680e2.exe" /INCREMENTAL /ILK:"cmTC_680e2.dir\\Debug\\cmTC_680e2.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t9npyr/Debug/cmTC_680e2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-t9npyr/Debug/cmTC_680e2.lib" /MACHINE:X64  /machine:x64 cmTC_680e2.dir\\Debug\\src.obj
+          cmTC_680e2.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t9npyr\\Debug\\cmTC_680e2.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_680e2.dir\\Debug\\cmTC_680e2.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_680e2.dir\\Debug\\cmTC_680e2.tlog\\cmTC_680e2.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t9npyr\\cmTC_680e2.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:01.70
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1853 (check_include_file)"
+    checks:
+      - "Looking for tpcshrd.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-zhpau7"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-zhpau7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_TPCSHRD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-zhpau7'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9fa0e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:32 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zhpau7\\cmTC_9fa0e.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_9fa0e.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zhpau7\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_9fa0e.dir\\Debug\\cmTC_9fa0e.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_9fa0e.dir\\Debug\\cmTC_9fa0e.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9fa0e.dir\\Debug\\\\" /Fd"cmTC_9fa0e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zhpau7\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9fa0e.dir\\Debug\\\\" /Fd"cmTC_9fa0e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zhpau7\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zhpau7\\Debug\\cmTC_9fa0e.exe" /INCREMENTAL /ILK:"cmTC_9fa0e.dir\\Debug\\cmTC_9fa0e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-zhpau7/Debug/cmTC_9fa0e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-zhpau7/Debug/cmTC_9fa0e.lib" /MACHINE:X64  /machine:x64 cmTC_9fa0e.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_9fa0e.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zhpau7\\Debug\\cmTC_9fa0e.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_9fa0e.dir\\Debug\\cmTC_9fa0e.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_9fa0e.dir\\Debug\\cmTC_9fa0e.tlog\\cmTC_9fa0e.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zhpau7\\cmTC_9fa0e.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.87
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1854 (check_include_file)"
+    checks:
+      - "Looking for roapi.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-vaj8vq"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-vaj8vq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_ROAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-vaj8vq'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_161be.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:33 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vaj8vq\\cmTC_161be.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_161be.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vaj8vq\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_161be.dir\\Debug\\cmTC_161be.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_161be.dir\\Debug\\cmTC_161be.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_161be.dir\\Debug\\\\" /Fd"cmTC_161be.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vaj8vq\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_161be.dir\\Debug\\\\" /Fd"cmTC_161be.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vaj8vq\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vaj8vq\\Debug\\cmTC_161be.exe" /INCREMENTAL /ILK:"cmTC_161be.dir\\Debug\\cmTC_161be.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-vaj8vq/Debug/cmTC_161be.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-vaj8vq/Debug/cmTC_161be.lib" /MACHINE:X64  /machine:x64 cmTC_161be.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_161be.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vaj8vq\\Debug\\cmTC_161be.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_161be.dir\\Debug\\cmTC_161be.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_161be.dir\\Debug\\cmTC_161be.tlog\\cmTC_161be.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vaj8vq\\cmTC_161be.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.86
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1855 (check_include_file)"
+    checks:
+      - "Looking for mmdeviceapi.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-j8kb3r"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-j8kb3r"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_MMDEVICEAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-j8kb3r'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cd3e9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:34 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j8kb3r\\cmTC_cd3e9.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_cd3e9.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j8kb3r\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_cd3e9.dir\\Debug\\cmTC_cd3e9.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_cd3e9.dir\\Debug\\cmTC_cd3e9.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cd3e9.dir\\Debug\\\\" /Fd"cmTC_cd3e9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j8kb3r\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CheckIncludeFile.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cd3e9.dir\\Debug\\\\" /Fd"cmTC_cd3e9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j8kb3r\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j8kb3r\\Debug\\cmTC_cd3e9.exe" /INCREMENTAL /ILK:"cmTC_cd3e9.dir\\Debug\\cmTC_cd3e9.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-j8kb3r/Debug/cmTC_cd3e9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-j8kb3r/Debug/cmTC_cd3e9.lib" /MACHINE:X64  /machine:x64 cmTC_cd3e9.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_cd3e9.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j8kb3r\\Debug\\cmTC_cd3e9.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_cd3e9.dir\\Debug\\cmTC_cd3e9.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_cd3e9.dir\\Debug\\cmTC_cd3e9.tlog\\cmTC_cd3e9.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j8kb3r\\cmTC_cd3e9.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.88
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1856 (check_include_file)"
+    checks:
+      - "Looking for audioclient.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ch24ys"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ch24ys"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_AUDIOCLIENT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ch24ys'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fafad.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:35 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ch24ys\\cmTC_fafad.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_fafad.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ch24ys\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_fafad.dir\\Debug\\cmTC_fafad.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_fafad.dir\\Debug\\cmTC_fafad.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fafad.dir\\Debug\\\\" /Fd"cmTC_fafad.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ch24ys\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fafad.dir\\Debug\\\\" /Fd"cmTC_fafad.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ch24ys\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ch24ys\\Debug\\cmTC_fafad.exe" /INCREMENTAL /ILK:"cmTC_fafad.dir\\Debug\\cmTC_fafad.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ch24ys/Debug/cmTC_fafad.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-ch24ys/Debug/cmTC_fafad.lib" /MACHINE:X64  /machine:x64 cmTC_fafad.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_fafad.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ch24ys\\Debug\\cmTC_fafad.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_fafad.dir\\Debug\\cmTC_fafad.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_fafad.dir\\Debug\\cmTC_fafad.tlog\\cmTC_fafad.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ch24ys\\cmTC_fafad.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.87
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1857 (check_include_file)"
+    checks:
+      - "Looking for sensorsapi.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d2ippc"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d2ippc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_SENSORSAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d2ippc'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_36a20.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:36 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d2ippc\\cmTC_36a20.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_36a20.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d2ippc\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_36a20.dir\\Debug\\cmTC_36a20.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_36a20.dir\\Debug\\cmTC_36a20.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_36a20.dir\\Debug\\\\" /Fd"cmTC_36a20.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d2ippc\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CheckIncludeFile.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_36a20.dir\\Debug\\\\" /Fd"cmTC_36a20.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d2ippc\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d2ippc\\Debug\\cmTC_36a20.exe" /INCREMENTAL /ILK:"cmTC_36a20.dir\\Debug\\cmTC_36a20.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d2ippc/Debug/cmTC_36a20.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-d2ippc/Debug/cmTC_36a20.lib" /MACHINE:X64  /machine:x64 cmTC_36a20.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_36a20.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d2ippc\\Debug\\cmTC_36a20.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_36a20.dir\\Debug\\cmTC_36a20.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_36a20.dir\\Debug\\cmTC_36a20.tlog\\cmTC_36a20.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d2ippc\\cmTC_36a20.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.87
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "third_party/SDL2/CMakeLists.txt:1858 (check_include_file)"
+    checks:
+      - "Looking for shellscalingapi.h"
+    directories:
+      source: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-9uys8n"
+      binary: "C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-9uys8n"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/user/source/repos/pmd_viewer/third_party/SDL2/cmake"
+      VCPKG_INSTALLED_DIR: "C:/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/vcpkg"
+    buildResult:
+      variable: "HAVE_SHELLSCALINGAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-9uys8n'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_36db7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.6.3+07e294721 for .NET Framework
+        2025/01/08 4:14:37 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9uys8n\\cmTC_36db7.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_36db7.dir\\Debug\\" を作成しています。
+          ディレクトリ "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9uys8n\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_36db7.dir\\Debug\\cmTC_36db7.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_36db7.dir\\Debug\\cmTC_36db7.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_36db7.dir\\Debug\\\\" /Fd"cmTC_36db7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9uys8n\\CheckIncludeFile.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+          CheckIncludeFile.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_36db7.dir\\Debug\\\\" /Fd"cmTC_36db7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9uys8n\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9uys8n\\Debug\\cmTC_36db7.exe" /INCREMENTAL /ILK:"cmTC_36db7.dir\\Debug\\cmTC_36db7.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-9uys8n/Debug/cmTC_36db7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/user/source/repos/pmd_viewer/build/CMakeFiles/CMakeScratch/TryCompile-9uys8n/Debug/cmTC_36db7.lib" /MACHINE:X64  /machine:x64 cmTC_36db7.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_36db7.vcxproj -> C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9uys8n\\Debug\\cmTC_36db7.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_36db7.dir\\Debug\\cmTC_36db7.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_36db7.dir\\Debug\\cmTC_36db7.tlog\\cmTC_36db7.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\Users\\user\\source\\repos\\pmd_viewer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9uys8n\\cmTC_36db7.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.87
+        
+      exitCode: 0
+...
