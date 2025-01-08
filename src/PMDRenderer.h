@@ -36,8 +36,11 @@ void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVert
 // OpenGL用のVBOを作成
 GLuint createVBO(const std::vector<PMDVertex>& vertices);
 
+// OpenGL用のEBOを作成
+GLuint createEBO(const std::vector<uint16_t>& indices);
+
 // OpenGL用の描画処理
-void render(GLuint vbo, GLuint shaderProgram, size_t vertexCount);
+void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, size_t indexCount);
 
 std::string loadShaderSource(const std::string& filePath);
 

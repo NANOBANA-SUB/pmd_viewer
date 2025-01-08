@@ -33,6 +33,9 @@ int main(int argc, char* argv[])
     // VBO作成
     GLuint vbo = createVBO(vertices);
 
+    // EBO作成
+    GLuint ebo = createEBO(indices);
+
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
     bool running = true;
@@ -48,7 +51,7 @@ int main(int argc, char* argv[])
         }
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        render(vbo, shaderProgram, vertices.size());
+        render(vbo, ebo, shaderProgram, vertices.size(), indices.size());
         SDL_GL_SwapWindow(window);
     }
 

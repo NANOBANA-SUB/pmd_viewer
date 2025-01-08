@@ -85,22 +85,40 @@ void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVert
 GLuint createVBO(const std::vector<PMDVertex>& vertices)
 {
     GLuint vbo;
+
+    // 頂点データをvboに送信
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(PMDVertex), vertices.data(), GL_STATIC_DRAW);
 
     return vbo;
 }
 
-void render(GLuint vbo, GLuint shaderProgram, size_t vertexCount) 
+GLuint createEBO(const std::vector<uint16_t>& indices)
+{
+    GLuint ebo;
+
+    // インデックスデータをeboに送信
+    glGenBuffers(1, &ebo);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(uint16_t), indices.data(), GL_STATIC_DRAW);
+
+    return ebo;
+}
+
+void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, size_t indexCount) 
 {
     glUseProgram(shaderProgram);
 
     // シェーダーに行列を設定
     glm::mat4 model = glm::mat4(1.0f);
     glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 25.0f), glm::vec3(0.0f, 10.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-    glm::mat4 projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
+
+    int windowWidth = 1270; // 実際のウィンドウの幅
+    int windowHeight = 720; // 実際のウィンドウの高さ
+    float aspectRatio = static_cast<float>(windowWidth) / static_cast<float>(windowHeight);
+
+    glm::mat4 projection = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
 
     GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
     GLuint viewLoc = glGetUniformLocation(shaderProgram, "view");
@@ -112,6 +130,7 @@ void render(GLuint vbo, GLuint shaderProgram, size_t vertexCount)
 
     // 頂点データをバインドして描画
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, pos));
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, normal));
@@ -121,7 +140,8 @@ void render(GLuint vbo, GLuint shaderProgram, size_t vertexCount)
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
 
-    glDrawArrays(GL_POINTS, 0, vertexCount);
+    // glDrawArrays(GL_POINTS, 0, vertexCount);
+    glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_SHORT, 0);
 
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
