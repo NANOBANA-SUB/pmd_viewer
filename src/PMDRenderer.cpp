@@ -79,7 +79,7 @@ void render(GLuint vbo, GLuint shaderProgram, size_t vertexCount)
 
     // シェーダーに行列を設定
     glm::mat4 model = glm::mat4(1.0f);
-    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 50.0f), glm::vec3(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 25.0f), glm::vec3(0.0f, 10.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
 
     GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
@@ -101,7 +101,7 @@ void render(GLuint vbo, GLuint shaderProgram, size_t vertexCount)
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
 
-    glDrawArrays(GL_TRIANGLES, 0, vertexCount);
+    glDrawArrays(GL_POINTS, 0, vertexCount);
 
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
