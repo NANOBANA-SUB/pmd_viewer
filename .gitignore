@@ -50,7 +50,7 @@ Makefile
 *.VC.VC.opendb
 
 # 依存関係管理関連
-third_party/*
+third_party/glew
 
 # テストカバレッジデータ
 *.gcda
