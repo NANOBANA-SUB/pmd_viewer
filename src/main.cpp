@@ -27,7 +27,8 @@ int main(int argc, char* argv[])
     // PMDモデルの読み込み
     PMDHeader header;
     std::vector<PMDVertex> vertices;
-    loadPMD("model/miku.pmd", header, vertices);    // とりあえずハードコーディングで
+    std::vector<uint16_t> indices;
+    loadPMD("model/miku.pmd", header, vertices, indices);    // とりあえずハードコーディングで
 
     // VBO作成
     GLuint vbo = createVBO(vertices);

@@ -31,7 +31,7 @@ struct PMDVertex
 #pragma pack(pop)
 
 // PMDモデルのロード
-void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVertex>& vertices);
+void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVertex>& vertices, std::vector<uint16_t>& indices);
 
 // OpenGL用のVBOを作成
 GLuint createVBO(const std::vector<PMDVertex>& vertices);

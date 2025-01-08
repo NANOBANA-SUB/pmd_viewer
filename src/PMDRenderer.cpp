@@ -5,7 +5,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <sstream>
 
-void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVertex>& vertices)
+void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVertex>& vertices, std::vector<uint16_t>& indices)
 {
     std::ifstream file(filePath, std::ios::binary);
     if (!file.is_open()) 
@@ -55,6 +55,26 @@ void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVert
     if (!file) 
     {
         std::cerr << "Failed to read vertex data" << std::endl;
+        return;
+    }
+
+    // インデックス数を読み込む
+    uint32_t index_count;
+    file.read(reinterpret_cast<char*>(&index_count), sizeof(uint32_t));
+    if (!file) 
+    {
+        std::cerr << "Failed to read index count" << std::endl;
+        return;
+    }
+
+    std::cout << "Index count: " << index_count << std::endl;
+
+    // インデックスデータを読み込む
+    indices.resize(index_count);
+    file.read(reinterpret_cast<char*>(indices.data()), index_count * sizeof(uint16_t));
+    if (!file) 
+    {
+        std::cerr << "Failed to read index data" << std::endl;
         return;
     }
 
