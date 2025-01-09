@@ -5,7 +5,8 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <sstream>
 
-void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVertex>& vertices, std::vector<uint16_t>& indices)
+void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVertex>& vertices, std::vector<uint16_t>& indices,
+            std::vector<PMDMaterial>& materials)
 {
     std::ifstream file(filePath, std::ios::binary);
     if (!file.is_open()) 
@@ -78,6 +79,26 @@ void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVert
         return;
     }
 
+    // マテリアル数を読み込む
+    uint32_t material_count;
+    file.read(reinterpret_cast<char*>(&material_count), sizeof(uint32_t));
+    if (!file) 
+    {
+        std::cerr << "Failed to read material count" << std::endl;
+        return;
+    }
+
+    std::cout << "Material count: " << material_count << std::endl;
+
+    // マテリアルデータを読み込む
+    materials.resize(material_count);
+    file.read(reinterpret_cast<char*>(materials.data()), material_count * sizeof(PMDMaterial));
+    if (!file) 
+    {
+        std::cerr << "Failed to read material data" << std::endl;
+        return;
+    }
+
     file.close();
     std::cout << "PMD file loaded successfully." << std::endl;
 }
@@ -106,7 +127,7 @@ GLuint createEBO(const std::vector<uint16_t>& indices)
     return ebo;
 }
 
-void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, size_t indexCount) 
+void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, size_t indexCount, const std::vector<PMDMaterial>& materials) 
 {
     glUseProgram(shaderProgram);
 
@@ -114,40 +135,42 @@ void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, si
     glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 model = rotation * glm::mat4(1.0f);
     glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 25.0f), glm::vec3(0.0f, 10.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-
-    int windowWidth = 1270; // 実際のウィンドウの幅
-    int windowHeight = 720; // 実際のウィンドウの高さ
-    float aspectRatio = static_cast<float>(windowWidth) / static_cast<float>(windowHeight);
-
+    float aspectRatio = 1270.0f / 720.0f;
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
 
-    GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
-    GLuint viewLoc = glGetUniformLocation(shaderProgram, "view");
-    GLuint projLoc = glGetUniformLocation(shaderProgram, "projection");
-    
-    // シェーダーに uniform 変数を送信
-    glUniform3f(glGetUniformLocation(shaderProgram, "lightPos"), 1.0f, 10.0f, 2.0f); // 光源位置
-    glUniform3f(glGetUniformLocation(shaderProgram, "lightColor"), 1.0f, 1.0f, 1.0f); // 白色の光
-    glUniform3f(glGetUniformLocation(shaderProgram, "objectColor"), 0.6f, 0.7f, 0.8f); // オブジェクトの色
+    glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
+    glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "view"), 1, GL_FALSE, glm::value_ptr(view));
+    glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+    glUniform3f(glGetUniformLocation(shaderProgram, "lightPos"), 1.0f, 10.0f, 2.0f);
+    glUniform3f(glGetUniformLocation(shaderProgram, "lightColor"), 0.8f, 0.8f, 0.8f);
 
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-
-    // 頂点データをバインドして描画
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, pos));
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, normal));
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, uv));
-
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
 
-    // glDrawArrays(GL_POINTS, 0, vertexCount);
-    glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_SHORT, 0);
+    // 累積オフセット
+    size_t indexOffset = 0;
+
+    for (const auto& material : materials) 
+    {
+        // マテリアル情報をシェーダーに送信
+        glUniform3f(glGetUniformLocation(shaderProgram, "material.ambient"), material.ambient.x, material.ambient.y, material.ambient.z);
+        glUniform3f(glGetUniformLocation(shaderProgram, "material.diffuse"), material.diffuse.x, material.diffuse.y, material.diffuse.z);
+        glUniform3f(glGetUniformLocation(shaderProgram, "material.specular"), material.specular.x, material.specular.y, material.specular.z);
+        glUniform1f(glGetUniformLocation(shaderProgram, "material.shininess"), material.specularity); // スペキュラの強さ
+
+        // 描画
+        glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(material.indicesNum), GL_UNSIGNED_SHORT, (void*)(indexOffset * sizeof(GLushort)));
+
+        // 次のオフセットを計算
+        indexOffset += material.indicesNum;
+    }
 
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);

@@ -30,8 +30,25 @@ struct PMDVertex
 };
 #pragma pack(pop)
 
+// PMDマテリアル構造体
+#pragma pack(1)
+struct PMDMaterial
+{
+    glm::vec3 diffuse;      // ディフューズ
+    float alpha;            // ディフューズα
+    float specularity;      // スペキュラの強さ(乗算値)
+    glm::vec3 specular;     // スペキュラ色
+    glm::vec3 ambient;      // アンビエント色
+    uint8_t toonIdx;        // トゥーン番号
+    uint8_t edge_flag;      // マテリアルごとの輪郭線フラグ
+    uint32_t indicesNum;    // インデックス数
+    uint8_t tecFilePath[20];// テクスチャファイル名+α
+};
+#pragma pack()
+
 // PMDモデルのロード
-void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVertex>& vertices, std::vector<uint16_t>& indices);
+void loadPMD(const std::string& filePath, PMDHeader& header, std::vector<PMDVertex>& vertices, std::vector<uint16_t>& indices,
+            std::vector<PMDMaterial>& materials);
 
 // OpenGL用のVBOを作成
 GLuint createVBO(const std::vector<PMDVertex>& vertices);
@@ -40,7 +57,7 @@ GLuint createVBO(const std::vector<PMDVertex>& vertices);
 GLuint createEBO(const std::vector<uint16_t>& indices);
 
 // OpenGL用の描画処理
-void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, size_t indexCount);
+void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, size_t indexCount, const std::vector<PMDMaterial>& materials);
 
 std::string loadShaderSource(const std::string& filePath);
 

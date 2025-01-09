@@ -30,7 +30,8 @@ int main(int argc, char* argv[])
     PMDHeader header;
     std::vector<PMDVertex> vertices;
     std::vector<uint16_t> indices;
-    loadPMD("model/miku.pmd", header, vertices, indices);    // とりあえずハードコーディングで
+    std::vector<PMDMaterial> materials;
+    loadPMD("model/miku.pmd", header, vertices, indices, materials);    // とりあえずハードコーディングで
 
     // VBO作成
     GLuint vbo = createVBO(vertices);
@@ -53,7 +54,7 @@ int main(int argc, char* argv[])
         }
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        render(vbo, ebo, shaderProgram, vertices.size(), indices.size());
+        render(vbo, ebo, shaderProgram, vertices.size(), indices.size(), materials);
         SDL_GL_SwapWindow(window);
     }
 
