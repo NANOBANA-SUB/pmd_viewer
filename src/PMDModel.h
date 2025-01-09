@@ -1,5 +1,5 @@
-#ifndef PMD_H
-#define PMD_H
+#ifndef PMD_Model_H
+#define PMD_Model_H
 
 #include <vector>
 #include <string>
@@ -53,4 +53,4 @@ private:
 public:
 };
 
-#endif // PMD_H
+#endif // PMD_Model_H
