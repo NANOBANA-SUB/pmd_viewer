@@ -111,7 +111,8 @@ void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, si
     glUseProgram(shaderProgram);
 
     // シェーダーに行列を設定
-    glm::mat4 model = glm::mat4(1.0f);
+    glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 model = rotation * glm::mat4(1.0f);
     glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 25.0f), glm::vec3(0.0f, 10.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
     int windowWidth = 1270; // 実際のウィンドウの幅
@@ -123,6 +124,11 @@ void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, si
     GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
     GLuint viewLoc = glGetUniformLocation(shaderProgram, "view");
     GLuint projLoc = glGetUniformLocation(shaderProgram, "projection");
+    
+    // シェーダーに uniform 変数を送信
+    glUniform3f(glGetUniformLocation(shaderProgram, "lightPos"), 1.0f, 10.0f, 2.0f); // 光源位置
+    glUniform3f(glGetUniformLocation(shaderProgram, "lightColor"), 1.0f, 1.0f, 1.0f); // 白色の光
+    glUniform3f(glGetUniformLocation(shaderProgram, "objectColor"), 0.6f, 0.7f, 0.8f); // オブジェクトの色
 
     glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));

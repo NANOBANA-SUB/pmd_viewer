@@ -1,3 +1,4 @@
+/*頂点シェーダ*/
 #version 330 core
 
 layout(location = 0) in vec3 aPos; // 頂点座標

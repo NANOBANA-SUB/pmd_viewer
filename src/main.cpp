@@ -18,6 +18,8 @@ int main(int argc, char* argv[])
         return -1;
     }
 
+    SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
+
     SDL_GLContext glContext = SDL_GL_CreateContext(window);
     glewInit();
 
@@ -37,7 +39,7 @@ int main(int argc, char* argv[])
     GLuint ebo = createEBO(indices);
 
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-
+    glEnable(GL_DEPTH_TEST);
     bool running = true;
     SDL_Event event;
     while (running) 
