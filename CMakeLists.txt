@@ -23,9 +23,15 @@ target_compile_definitions(PMD_VIEWER PRIVATE GLEW_STATIC)
 set(GLM_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/glm)
 target_include_directories(PMD_VIEWER PRIVATE ${GLM_SOURCE_DIR})
 
+# ---SPDLOGの設定---
+set(SPDLOG_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/spdlog)
+add_subdirectory(${SPDLOG_SOURCE_DIR} EXCLUDE_FROM_ALL)
+target_include_directories(PMD_VIEWER PRIVATE ${SPDLOG_SOURCE_DIR}/include)
+
 # --- ライブラリのリンク ---
 target_link_libraries(PMD_VIEWER PRIVATE 
     SDL2-static SDL2main       # SDL2
+    spdlog  # spdlog
     "${GLEW_LIBRARY_DIR}/glew32s.lib" # GLEW (静的リンク)
     opengl32                  # OpenGL (Windows標準)
 )

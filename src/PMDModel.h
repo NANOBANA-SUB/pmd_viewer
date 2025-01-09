@@ -49,7 +49,7 @@ struct PMDMaterial
 class PMDModel
 {
 private:
-
+    std::vector<PMDVertex> m_vertexes;      // 頂点データのリスト
 public:
 };
 
