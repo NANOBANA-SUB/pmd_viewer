@@ -132,16 +132,17 @@ void render(GLuint vbo, GLuint ebo, GLuint shaderProgram, size_t vertexCount, si
     glUseProgram(shaderProgram);
 
     // シェーダーに行列を設定
-    glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-    glm::mat4 model = rotation * glm::mat4(1.0f);
-    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 25.0f), glm::vec3(0.0f, 10.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 rotation_y = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 rotation_x = glm::rotate(glm::mat4(1.0f), glm::radians(20.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+    glm::mat4 model = rotation_x * rotation_y * glm::mat4(1.0f);
+    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 30.0f), glm::vec3(0.0f, 10.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     float aspectRatio = 1270.0f / 720.0f;
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
 
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "view"), 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
-    glUniform3f(glGetUniformLocation(shaderProgram, "lightPos"), 1.0f, 10.0f, 2.0f);
+    glUniform3f(glGetUniformLocation(shaderProgram, "lightPos"), 1.0f, 10.0f, 20.0f);
     glUniform3f(glGetUniformLocation(shaderProgram, "lightColor"), 0.8f, 0.8f, 0.8f);
 
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
