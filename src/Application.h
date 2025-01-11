@@ -5,8 +5,8 @@
 #include <SDL.h>
 #include <GL/glew.h>
 
-const int SCREEN_WIDTH = 1280;
-const int SCREEN_HEIGHT = 720;
+const int WINDOW_WIDTH = 1280;
+const int WINDOW_HEIGHT = 720;
 
 class Application
 {
