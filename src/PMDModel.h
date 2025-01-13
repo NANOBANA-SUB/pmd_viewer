@@ -48,6 +48,8 @@ struct PMDMaterial
 
 class PMDModel
 {
+public:
+    PMDModel(std::string& filePath);
 private:
     PMDHeader m_header;                     // ヘッダ
     std::vector<PMDVertex> m_vertices;      // 頂点データのリスト
@@ -55,8 +57,6 @@ private:
     std::vector<PMDMaterial> m_materials;   // マテリアルデータのリスト
 
     void loadPMD(std::string& filePath);
-public:
-    PMDModel(std::string& filePath);
 };
 
 #endif // PMD_Model_H
