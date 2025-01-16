@@ -49,7 +49,11 @@ struct PMDMaterial
 class PMDModel
 {
 public:
-    PMDModel(std::string& filePath);
+    PMDModel(std::string& filePath) { loadPMD(filePath); }
+    std::vector<PMDVertex> get_vertices() const { return m_vertices; }
+    std::vector<uint16_t> get_indices() const { return m_indices; }
+    std::vector<PMDMaterial> get_materials() const { return m_materials; }
+
 private:
     PMDHeader m_header;                     // ヘッダ
     std::vector<PMDVertex> m_vertices;      // 頂点データのリスト

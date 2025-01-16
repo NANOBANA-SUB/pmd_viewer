@@ -14,10 +14,11 @@ std::string Shader::loadShaderSource(const std::string& filePath)
     if (!file.is_open())
     {
         spdlog::get("basic_logger")->error("Failed to open file: {}", filePath);
-        return;
+        return "";
     }
     std::stringstream buffer;
     buffer << file.rdbuf();
+
     return buffer.str();
 }
 
@@ -46,6 +47,9 @@ void Shader::createShaderProgram(const std::string& vertexPath, const std::strin
     std::string vertexSource = loadShaderSource(vertexPath);
     std::string fragmentSource = loadShaderSource(fragmentPath);
 
+    if (vertexSource == "" || fragmentPath == "")
+        return;
+        
     // シェーダーをコンパイル
     GLuint vertexShader = compileShader(GL_VERTEX_SHADER, vertexSource);
     GLuint fragmentShader = compileShader(GL_FRAGMENT_SHADER, fragmentSource);
