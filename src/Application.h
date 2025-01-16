@@ -10,15 +10,16 @@ const int WINDOW_HEIGHT = 720;
 
 class Application
 {
+public:
+    Application():m_window(nullptr), m_glContext(NULL), m_isRunning(true){}
+    void run();
+
 private:
     SDL_Window* m_window;
     SDL_GLContext m_glContext;
     bool m_isRunning;
 
     bool isInitialize();
-public:
-    Application():m_window(nullptr), m_glContext(NULL), m_isRunning(true){}
-    void run();
 };
 
 #endif APPLICATION_H

@@ -1,4 +1,8 @@
 #include "Application.h"
+#include "PMDModel.h"
+#include "Renderer.h"
+#include "Shader.h"
+#include <string>
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/basic_file_sink.h>
@@ -53,6 +57,15 @@ bool Application::isInitialize()
 
 void Application::run()
 {
+    if (!isInitialize()) return;
+    
+    std::string filePath = "model/miku.pmd";
+    PMDModel miku = PMDModel(filePath);
+    std::string vertexPath = "shader/vertex_shader.glsl";
+    std::string fragmentPath = "shader/fragment_shader.glsl";
+    Shader shader = Shader(vertexPath, fragmentPath);
+    Renderer renderer = Renderer(miku, shader);
+
     // 背景を白に
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
@@ -70,7 +83,7 @@ void Application::run()
             if (event.type == SDL_QUIT)
                 m_isRunning = false;
         }
-        
+        renderer.render();
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         SDL_GL_SwapWindow(m_window);
     }
