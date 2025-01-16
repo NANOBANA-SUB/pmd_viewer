@@ -10,7 +10,6 @@
 bool Application::isInitialize()
 {
     // 初期化メソッド
-
     // ロガーの設定
     auto logger = spdlog::basic_logger_mt("basic_logger", "logs/basic-log.txt");
 
@@ -24,9 +23,6 @@ bool Application::isInitialize()
     // OpenGL設定
     // コアOpenGLプロファイル
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-    // バージョン3.3を指定
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     // RGBA各チャネル8ビットのカラーバッファ
     SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
@@ -58,7 +54,7 @@ bool Application::isInitialize()
 void Application::run()
 {
     if (!isInitialize()) return;
-    
+
     std::string filePath = "model/miku.pmd";
     PMDModel miku = PMDModel(filePath);
     std::string vertexPath = "shader/vertex_shader.glsl";
@@ -83,8 +79,8 @@ void Application::run()
             if (event.type == SDL_QUIT)
                 m_isRunning = false;
         }
-        renderer.render();
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        renderer.render();
         SDL_GL_SwapWindow(m_window);
     }
 

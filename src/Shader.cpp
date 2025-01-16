@@ -7,9 +7,6 @@
 
 std::string Shader::loadShaderSource(const std::string& filePath)
 {
-    // ロガーの設定
-    auto logger = spdlog::basic_logger_mt("basic_logger", "logs/basic-log.txt");
-
     std::ifstream file(filePath);
     if (!file.is_open())
     {

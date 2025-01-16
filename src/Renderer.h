@@ -10,7 +10,11 @@
 class Renderer
 {
 public:
-    Renderer(const PMDModel model, const Shader shader) :m_model(model), m_shaderProgram(shader.getSheaderProgram()) {}
+    Renderer(const PMDModel model, const Shader shader) :m_model(model), m_shaderProgram(shader.getSheaderProgram()) 
+    {
+        createVBO();
+        createEBO();
+    }
     void render();
 private:
     GLuint m_vbo, m_ebo, m_shaderProgram;

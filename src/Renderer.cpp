@@ -14,8 +14,8 @@ void Renderer::createEBO()
 {
     // インデックスデータをeboに送信
     glGenBuffers(1, &m_ebo);
-    glBindBuffer(GL_ARRAY_BUFFER, m_ebo);
-    glBufferData(GL_ARRAY_BUFFER, m_model.get_indices().size() * sizeof(uint16_t), m_model.get_indices().data(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_model.get_indices().size() * sizeof(uint16_t), m_model.get_indices().data(), GL_STATIC_DRAW);
 }
 
 void Renderer::render()
