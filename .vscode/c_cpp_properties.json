@@ -9,7 +9,8 @@
                 "${workspaceFolder}/third_party/glm",
                 "${workspaceFolder}/third_party/glew/include",
                 "${workspaceFolder}/third_party/spdlog/include",
-                "${workspaceFolder}/third_party/imgui"
+                "${workspaceFolder}/third_party/imgui",
+                "${workspaceFolder}/editor/include"
             ],
             "defines": [
                 "_DEBUG",

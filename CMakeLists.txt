@@ -4,7 +4,7 @@ project(PMD_VIEWER)
 set(CMAKE_CXX_STANDARD 14)
 
 # 実行ファイルを設定
-set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Shader.cpp src/Renderer.cpp)
+set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Shader.cpp src/Renderer.cpp src/Window.cpp)
 add_executable(PMD_VIEWER ${SOURCE_FILES})
 
 # --- SDL2の設定 ---
