@@ -6,6 +6,9 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/basic_file_sink.h>
+#include <imgui.h>
+#include <backends/imgui_impl_opengl3.h>
+#include <backends/imgui_impl_sdl2.h>
 
 bool Application::isInitialize()
 {
@@ -68,21 +71,55 @@ void Application::run()
     // Zバッファ有効
     glEnable(GL_DEPTH_TEST);
 
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+
+    // ImGui init
+    ImGui_ImplSDL2_InitForOpenGL(m_window, m_glContext);
+    ImGui_ImplOpenGL3_Init();
+
     SDL_Event event;
 
     while (m_isRunning)
     {
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplSDL2_NewFrame();
+        ImGui::NewFrame();
+
         while (SDL_PollEvent(&event))
         {
+            ImGui_ImplSDL2_ProcessEvent(&event);
             if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
                 m_isRunning = false;
             if (event.type == SDL_QUIT)
                 m_isRunning = false;
         }
+
+        // Gui
+        {
+            ImGui::Begin("Rotation Settings");
+
+            static float x = 20.0f;
+            if (ImGui::SliderFloat("rotate X", &x, 0.0f, 360.0f)) renderer.set_rotation_x(x);
+
+            static float y = 180.0f;
+            if (ImGui::SliderFloat("rotate Y", &y, 0.0f, 360.0f)) renderer.set_rotation_y(y);
+
+            ImGui::End();
+        }
+
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         renderer.render();
+
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
         SDL_GL_SwapWindow(m_window);
     }
+
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplSDL2_Shutdown();
+    ImGui::DestroyContext();
 
     SDL_GL_DeleteContext(m_glContext);
     SDL_DestroyWindow(m_window);

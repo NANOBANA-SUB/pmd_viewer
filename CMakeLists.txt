@@ -28,6 +28,28 @@ set(SPDLOG_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/spdlog)
 add_subdirectory(${SPDLOG_SOURCE_DIR} EXCLUDE_FROM_ALL)
 target_include_directories(PMD_VIEWER PRIVATE ${SPDLOG_SOURCE_DIR}/include)
 
+# --- ImGuiの設定 ---
+set(IMGUI_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/imgui)
+
+# ImGuiのソースファイルとバックエンドを指定
+set(IMGUI_SOURCES
+    ${IMGUI_SOURCE_DIR}/imgui.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_draw.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_tables.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_widgets.cpp
+    ${IMGUI_SOURCE_DIR}/backends/imgui_impl_sdl2.cpp
+    ${IMGUI_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+# ImGuiのインクルードディレクトリを追加
+target_include_directories(PMD_VIEWER PRIVATE 
+    ${IMGUI_SOURCE_DIR}
+    ${IMGUI_SOURCE_DIR}/backends
+)
+
+# ImGuiのソースをPMD_VIEWERに追加
+target_sources(PMD_VIEWER PRIVATE ${IMGUI_SOURCES})
+
 # --- ライブラリのリンク ---
 target_link_libraries(PMD_VIEWER PRIVATE 
     SDL2-static SDL2main       # SDL2

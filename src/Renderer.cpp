@@ -25,7 +25,7 @@ void Renderer::render()
     // シェーダに行列を設定
     glm::mat4 rotation_y = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 rotation_x = glm::rotate(glm::mat4(1.0f), glm::radians(20.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-    glm::mat4 model = rotation_x * rotation_y * glm::mat4(1.0f);
+    glm::mat4 model = m_rotation_x * m_rotation_y * glm::mat4(1.0f);
     glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 30.0f), glm::vec3(0.0f, 10.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     float aspectRatio = 1270.0f / 720.0f;
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
