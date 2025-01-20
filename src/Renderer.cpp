@@ -1,6 +1,14 @@
 #include "Renderer.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <iostream>
+#include <filesystem>
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/stdout_color_sinks.h>
+#include <spdlog/sinks/basic_file_sink.h>
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb_image.h>
+
 
 void Renderer::createVBO()
 {
@@ -16,6 +24,48 @@ void Renderer::createEBO()
     glGenBuffers(1, &m_ebo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_model.get_indices().size() * sizeof(uint16_t), m_model.get_indices().data(), GL_STATIC_DRAW);
+}
+
+GLuint Renderer::LoadTexture(const std::string& texturePath)
+{
+    int width, height, channels;
+    unsigned char* data = stbi_load(texturePath.c_str(), &width, &height, &channels, 0);
+
+    if (!data) return 0;
+
+    GLuint textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+
+    // テクスチャデータを送信
+    glTexImage2D(GL_TEXTURE_2D, 0, channels == 4 ? GL_RGBA : GL_RGB, width, height, 0,
+                 channels == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, data);
+    glGenerateMipmap(GL_TEXTURE_2D);
+
+    // テクスチャパラメータ設定
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    stbi_image_free(data);
+    return textureID;
+}
+
+GLuint Renderer::GetOrLoadTexture(const std::string& texturePath)
+{
+    auto it = m_textureCache.find(texturePath);
+    if (it != m_textureCache.end()) 
+    {
+        return it->second; // キャッシュから返す
+    }
+
+    GLuint textureID = LoadTexture(texturePath);
+    if (textureID != 0) 
+    {
+        m_textureCache[texturePath] = textureID; // キャッシュに追加
+    }
+    return textureID;
 }
 
 void Renderer::render()
@@ -56,6 +106,15 @@ void Renderer::render()
         glUniform3f(glGetUniformLocation(m_shaderProgram, "material.diffuse"), material.diffuse.x, material.diffuse.y, material.diffuse.z);
         glUniform3f(glGetUniformLocation(m_shaderProgram, "material.specular"), material.specular.x, material.specular.y, material.specular.z);
         glUniform1f(glGetUniformLocation(m_shaderProgram, "material.shininess"), material.specularity); // スペキュラの強さ
+
+        std::string texturePath = m_model.ResolveTexPath(material.getTexturePath());
+        GLuint textureID = GetOrLoadTexture(texturePath);
+        
+        bool materialHasTexture = (textureID != 0);
+
+        glUniform1i(glGetUniformLocation(m_shaderProgram, "useTexture"), materialHasTexture ? 1 : 0);
+        
+        glBindTexture(GL_TEXTURE_2D, textureID);
 
         // 描画
         glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(material.indicesNum), GL_UNSIGNED_SHORT, (void*)(indexOffset * sizeof(GLushort)));

@@ -3,6 +3,7 @@
 
 #include "PMDModel.h"
 #include "Shader.h"
+#include <unordered_map>
 #include <vector>
 #include <glm/glm.hpp>
 #include <GL/glew.h>
@@ -19,9 +20,13 @@ public:
 private:
     GLuint m_vbo, m_ebo, m_shaderProgram;
     PMDModel m_model;
+    std::unordered_map<std::string, GLuint> m_textureCache;
 
     void createVBO();
     void createEBO();
+
+    GLuint LoadTexture(const std::string& texturePath);
+    GLuint GetOrLoadTexture(const std::string& texturePath);
 };
 
 #endif RENDERER_H

@@ -3,6 +3,8 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/basic_file_sink.h>
+#include <iostream>
+#include <filesystem>
 
 
 void PMDModel::loadPMD(std::string& filePath)
@@ -99,4 +101,12 @@ void PMDModel::loadPMD(std::string& filePath)
     file.close();
 
     spdlog::get("basic_logger")->info("PMD file loaded successfully.");
+}
+
+std::string PMDModel::ResolveTexPath(const std::string& relativeTexPath)
+{
+    namespace fs = std::filesystem;
+    fs::path pmdDir = fs::path(m_filePath).parent_path();
+    fs::path texturePath = pmdDir / relativeTexPath;
+    return texturePath.string();
 }
