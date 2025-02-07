@@ -53,6 +53,19 @@ struct PMDMaterial
 };
 #pragma pack()
 
+#pragma pack(1)
+// PMDのボーン構造体
+struct PMDBone
+{
+    char boneName[20];      // ボーン名
+    uint16_t parentNo;      // 親ボーン番号
+    uint16_t nextNo;        // 先端のボーン番号
+    uint8_t type;           // ボーン種別
+    uint16_t ikBoneNo;      // IKボーン番号
+    glm::vec3 pos;          // ボーンの基準点座標
+};
+#pragma pack()
+
 class PMDModel
 {
 public:
@@ -70,6 +83,7 @@ private:
     std::vector<PMDVertex> m_vertices;      // 頂点データのリスト
     std::vector<uint16_t> m_indices;        // インデックスデータのリスト
     std::vector<PMDMaterial> m_materials;   // マテリアルデータのリスト
+    std::vector<PMDBone> m_bones;           // ボーンのリスト
     std::string m_filePath;
 
     void loadPMD(std::string& filePath);

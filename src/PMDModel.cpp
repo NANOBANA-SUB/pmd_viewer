@@ -46,7 +46,6 @@ void PMDModel::loadPMD(std::string& filePath)
         spdlog::get("basic_logger")->error("Failed to read vertex count");
         return;
     }
-
     spdlog::get("basic_logger")->info("Vertex count: {}", vertex_count);
 
     // 頂点データを読み込む
@@ -66,7 +65,6 @@ void PMDModel::loadPMD(std::string& filePath)
         spdlog::get("basic_logger")->error("Failed to read index count");
         return;
     }
-
     spdlog::get("basic_logger")->info("Index count: {}", index_count);
 
     // インデックスデータを読み込む
@@ -86,7 +84,6 @@ void PMDModel::loadPMD(std::string& filePath)
         spdlog::get("basic_logger")->error("Failed to read material count");
         return;
     }
-
     spdlog::get("basic_logger")->info("Material count: {}", material_count);
 
     // マテリアルデータを読み込む
@@ -98,8 +95,26 @@ void PMDModel::loadPMD(std::string& filePath)
         return;
     }
 
-    file.close();
+    // ボーン数を読み込む
+    uint16_t bone_count;
+    file.read(reinterpret_cast<char*>(&bone_count), sizeof(uint16_t));
+    if (!file) 
+    {
+        spdlog::get("basic_logger")->error("Failed to read bone count");
+        return;
+    }
+    spdlog::get("basic_logger")->info("Bone count: {}", bone_count);
 
+    // ボーンデータを読み込む
+    m_bones.resize(bone_count);
+    file.read(reinterpret_cast<char*>(m_bones.data()), bone_count * sizeof(PMDBone));
+    if (!file) 
+    {
+        spdlog::get("basic_logger")->error("Failed to read bone data");
+        return;
+    }
+    
+    file.close();
     spdlog::get("basic_logger")->info("PMD file loaded successfully.");
 }
 
