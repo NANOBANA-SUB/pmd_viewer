@@ -86,15 +86,26 @@ void Renderer::render()
     glUniform3f(glGetUniformLocation(m_shaderProgram, "lightPos"), 1.0f, 10.0f, 20.0f);
     glUniform3f(glGetUniformLocation(m_shaderProgram, "lightColor"), 0.8f, 0.8f, 0.8f);
 
+    if (!m_model.get_boneMatrices().empty()) 
+    {
+        GLuint boneMatrixLocation = glGetUniformLocation(m_shaderProgram, "boneMatrices");
+        glUniformMatrix4fv(boneMatrixLocation, static_cast<GLsizei>(m_model.get_boneMatrices().size()), GL_FALSE, glm::value_ptr(m_model.get_boneMatrices()[0]));
+    }
+
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, pos));
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, normal));
+    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, pos));
+    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, normal));
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, uv));
+    glVertexAttribIPointer(3, 2, GL_UNSIGNED_SHORT, sizeof(PMDVertex), (void*)offsetof(PMDVertex, boneNo)); // boneNo[2]
+    glVertexAttribPointer(4, 1, GL_UNSIGNED_BYTE, GL_FALSE, sizeof(PMDVertex), (void*)offsetof(PMDVertex, weight)); // weight (normalized)
+
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
+    glEnableVertexAttribArray(3);
+    glEnableVertexAttribArray(4);
 
     // 累積オフセット
     size_t indexOffset = 0;

@@ -32,6 +32,16 @@ target_include_directories(PMD_VIEWER PRIVATE ${SPDLOG_SOURCE_DIR}/include)
 set(STB_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/stb)
 target_include_directories(PMD_VIEWER PRIVATE ${STB_SOURCE_DIR})
 
+# --- iconv ---
+find_library(ICONV_LIBRARY NAMES iconv PATHS ${CMAKE_PREFIX_PATH}/lib NO_DEFAULT_PATH)
+
+if(NOT ICONV_LIBRARY)
+    message(FATAL_ERROR "libiconv not found!")
+endif()
+
+# PMD_VIEWER にリンク
+target_link_libraries(PMD_VIEWER PRIVATE ${ICONV_LIBRARY})
+
 # --- ライブラリのリンク ---
 target_link_libraries(PMD_VIEWER PRIVATE 
     SDL2-static SDL2main       # SDL2

@@ -6,6 +6,7 @@
 #include <cstdint>
 #include <glm/glm.hpp>
 #include <GL/glew.h>
+#include <map>
 
 // PMDヘッダ構造体
 #pragma pack(push, 1)
@@ -66,6 +67,14 @@ struct PMDBone
 };
 #pragma pack()
 
+struct BoneNode
+{
+    int boneIdx;                        // ボーンインデックス
+    glm::vec3 startPos;                 // ボーン基準点(回転の軸)
+    glm::vec3 endPos;                   // ボーン先端点
+    std::vector<BoneNode*> children;    // 子ノード
+};
+
 class PMDModel
 {
 public:
@@ -77,7 +86,7 @@ public:
     const std::vector<uint16_t>& get_indices() const { return m_indices; }
     const std::vector<PMDMaterial>& get_materials() const { return m_materials; }
     const std::string& get_filePath() const { return m_filePath; }
-
+    const std::vector<glm::mat4x4> get_boneMatrices() const { return m_boneMatrices; }
 private:
     PMDHeader m_header;                     // ヘッダ
     std::vector<PMDVertex> m_vertices;      // 頂点データのリスト
@@ -85,8 +94,12 @@ private:
     std::vector<PMDMaterial> m_materials;   // マテリアルデータのリスト
     std::vector<PMDBone> m_bones;           // ボーンのリスト
     std::string m_filePath;
+    std::map<std::string, BoneNode> m_boneNodeTable;
+    std::vector<glm::mat4x4> m_boneMatrices;
 
     void loadPMD(std::string& filePath);
+    void changeNodeTable();
+    void recursiveMatrixMultiply(BoneNode* node, glm::mat4 mat);
 };
 
 #endif // PMD_Model_H
