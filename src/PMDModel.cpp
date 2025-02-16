@@ -134,19 +134,16 @@ void PMDModel::loadPMD(std::string& filePath)
     // 左腕のボーンノードを取得
     auto& node = m_boneNodeTable["左腕"];
     glm::vec3 pos = node.startPos;  // ボーンの開始位置
-
-    std::cout << "Before Rotation Pos: " << glm::to_string(pos) << std::endl;
-
     // ローカル座標で回転を適用
-    glm::mat4 translateToOrigin = glm::translate(glm::mat4(1.0f), -pos);
-    glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), glm::radians(-90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-    glm::mat4 translateBack = glm::translate(glm::mat4(1.0f), pos);
+    glm::mat4 armtranslateToOrigin = glm::translate(glm::mat4(1.0f), -pos);
+    glm::mat4 armrotation = glm::rotate(glm::mat4(1.0f), glm::radians(-90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    glm::mat4 armtranslateBack = glm::translate(glm::mat4(1.0f), pos);
 
     // 回転行列を適用
-    glm::mat4 localRotation = translateBack * rotation * translateToOrigin;
+    glm::mat4 localRotation = armtranslateBack * armrotation * armtranslateToOrigin;
 
-    // ボーン行列を更新 (ローカル座標のまま適用)
-    recursiveMatrixMultiply(&node, localRotation);
+    m_boneMatrices[node.boneIdx] = localRotation;
+    recursiveMatrixMultiply(&m_boneNodeTable["センター"], glm::mat4(1.0));
 
     std::cout << "After Rotation Pos: " << glm::to_string(pos) << std::endl;
 
