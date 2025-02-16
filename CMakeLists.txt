@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(PMD_VIEWER)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 # 実行ファイルを設定
 set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Shader.cpp src/Renderer.cpp)
@@ -27,6 +27,20 @@ target_include_directories(PMD_VIEWER PRIVATE ${GLM_SOURCE_DIR})
 set(SPDLOG_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/spdlog)
 add_subdirectory(${SPDLOG_SOURCE_DIR} EXCLUDE_FROM_ALL)
 target_include_directories(PMD_VIEWER PRIVATE ${SPDLOG_SOURCE_DIR}/include)
+
+# ---stbの設定---
+set(STB_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/stb)
+target_include_directories(PMD_VIEWER PRIVATE ${STB_SOURCE_DIR})
+
+# --- iconv ---
+find_library(ICONV_LIBRARY NAMES iconv PATHS ${CMAKE_PREFIX_PATH}/lib NO_DEFAULT_PATH)
+
+if(NOT ICONV_LIBRARY)
+    message(FATAL_ERROR "libiconv not found!")
+endif()
+
+# PMD_VIEWER にリンク
+target_link_libraries(PMD_VIEWER PRIVATE ${ICONV_LIBRARY})
 
 # --- ライブラリのリンク ---
 target_link_libraries(PMD_VIEWER PRIVATE 
