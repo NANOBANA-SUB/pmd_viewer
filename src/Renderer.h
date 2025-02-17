@@ -22,11 +22,18 @@ private:
     PMDModel m_model;
     std::unordered_map<std::string, GLuint> m_textureCache;
 
+    // フレームバッファオブジェクト(FBO)
+    GLuint m_fbo, m_texture, m_rbo;
+
     void createVBO();
     void createEBO();
 
     GLuint LoadTexture(const std::string& texturePath);
     GLuint GetOrLoadTexture(const std::string& texturePath);
+
+    void createFramebuffer();   // FBOの作成
+    void renderToTexture();     // FBOにレンダリング
+    void renderPostProcess();   // ポストプロセス
 };
 
 #endif RENDERER_H
