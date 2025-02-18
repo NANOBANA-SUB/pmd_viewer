@@ -87,7 +87,6 @@ void Renderer::render()
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
 
     glUniformMatrix4fv(glGetUniformLocation(m_shaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
-    CheckGLError("glmUniformMatrix4fv(model)");
     glUniformMatrix4fv(glGetUniformLocation(m_shaderProgram, "view"), 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(glGetUniformLocation(m_shaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
     glUniform3f(glGetUniformLocation(m_shaderProgram, "lightPos"), 1.0f, 10.0f, 20.0f);
@@ -137,10 +136,6 @@ void Renderer::render()
         // 描画
         glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(material.indicesNum), GL_UNSIGNED_SHORT, (void*)(indexOffset * sizeof(GLushort)));
 
-        GLenum err;
-        while ((err = glGetError()) != GL_NO_ERROR) {
-            spdlog::get("basic_logger")->error("OpenGL Error (glDrawElements): {}", err);
-        }
         // 次のオフセットを計算
         indexOffset += material.indicesNum;
     }
