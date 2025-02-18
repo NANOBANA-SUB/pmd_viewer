@@ -13,10 +13,7 @@ class Renderer
 public:
     Renderer(const PMDModel model, const Shader shader) :m_model(model), m_shaderProgram(shader.getSheaderProgram()) 
     {
-        // VAOの作成とバインド
-        glGenVertexArrays(1, &m_vao);
-        glBindVertexArray(m_vao);
-
+        createVAO();
         createVBO();
         createEBO();
 
@@ -44,7 +41,7 @@ private:
     PMDModel m_model;
     std::unordered_map<std::string, GLuint> m_textureCache;
 
-    void initialize();
+    void createVAO();
     void createVBO();
     void createEBO();
 
