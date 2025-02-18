@@ -13,15 +13,17 @@ class Renderer
 public:
     Renderer(const PMDModel model, const Shader shader) :m_model(model), m_shaderProgram(shader.getSheaderProgram()) 
     {
+        createVAO();
         createVBO();
         createEBO();
     }
     void render();
 private:
-    GLuint m_vbo, m_ebo, m_shaderProgram;
+    GLuint m_vao, m_vbo, m_ebo, m_shaderProgram;
     PMDModel m_model;
     std::unordered_map<std::string, GLuint> m_textureCache;
 
+    void createVAO();
     void createVBO();
     void createEBO();
 
