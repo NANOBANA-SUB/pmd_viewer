@@ -50,6 +50,7 @@ bool Application::isInitialize()
     glewInit();
 
     spdlog::get("basic_logger")->info("Application is Initialized.");
+    spdlog::get("basic_logger")->info("OpenGL Version: {}", reinterpret_cast<const char*>(glGetString(GL_VERSION)));
     return true;
 }
 
