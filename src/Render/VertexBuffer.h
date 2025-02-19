@@ -2,8 +2,6 @@
 #define VERTEXBUFFER_H
 
 #include <GL/glew.h>
-#include <glm/glm.hpp>
-#include <unordered_map>
 
 class VertexBuffer
 {
@@ -22,6 +20,6 @@ public:
 
     void SetData(const void* data, size_t size, GLenum usage = GL_STATIC_DRAW);
 private:
-    GLuint m_vbo;
+    GLuint m_vbo{};
 };
 #endif // VERTEXBUFFER_H

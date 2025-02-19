@@ -2,7 +2,6 @@
 #define INDEXBUFFER_H
 
 #include <GL/glew.h>
-#include <vector>
 
 class IndexBuffer
 {
@@ -21,7 +20,7 @@ public:
 
     void SetData(const void* data, size_t size, GLenum usage = GL_STATIC_DRAW);
 private:
-    GLuint m_ebo;
+    GLuint m_ebo{};
 };
 
 #endif // INDEXBUFFER_H
