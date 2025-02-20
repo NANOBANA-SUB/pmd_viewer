@@ -49,4 +49,4 @@ private:
     GLuint GetOrLoadTexture(const std::string& texturePath);
 };
 
-#endif RENDERER_H
+#endif // RENDERER_H

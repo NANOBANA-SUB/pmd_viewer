@@ -2,6 +2,7 @@
 #define RENDER_H
 
 #include <memory>
+#include <unordered_map>
 #include <GL/glew.h>
 #include "VertexArray.h"
 #include "VertexBuffer.h"
@@ -29,9 +30,13 @@ public:
 
 private:
     RendererData m_data{};
+    std::unordered_map<std::string, GLuint> m_textureCache;
 
     void Init();
     void SetVariables();
     void SetupBuffers();
+
+    GLuint LoadTexture(const std::string& texturePath);
+    GLuint GetOrLoadTexture(const std::string& texturePath);
 };
 #endif // RENDER_H

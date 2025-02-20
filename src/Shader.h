@@ -17,4 +17,4 @@ private:
     void createShaderProgram(const std::string& vertexPath, const std::string& fragmentPath);
 };
 
-#endif SHADER_H
+#endif // SHADER_H
