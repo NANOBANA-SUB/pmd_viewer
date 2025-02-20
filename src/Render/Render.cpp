@@ -28,8 +28,8 @@ void Renderer::SetupBuffers()
 
     m_data.m_vao->Bind();
 
-    m_data.m_vbo->SetData(m_data.m_pmdModel->get_vertices().data(), m_data.m_pmdModel->get_vertices().size() * sizeof(PMDModel));
-    m_data.m_ebo->SetData(m_data.m_pmdModel->get_indices().data(), m_data.m_pmdModel->get_indices().size() * sizeof(PMDModel));
+    m_data.m_vbo->SetData(m_data.m_pmdModel->get_vertices().data(), m_data.m_pmdModel->get_vertices().size() * sizeof(PMDVertex));
+    m_data.m_ebo->SetData(m_data.m_pmdModel->get_indices().data(), m_data.m_pmdModel->get_indices().size() * sizeof(uint16_t));
 
     VertexArray::Unbind();
     VertexBuffer::Unbind();
