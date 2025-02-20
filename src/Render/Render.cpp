@@ -25,7 +25,7 @@ void Renderer::SetupBuffers()
     m_data.m_vao = std::make_unique<VertexArray>(VertexArray());
     m_data.m_vbo = std::make_unique<VertexBuffer>(VertexBuffer());
     m_data.m_ebo = std::make_unique<IndexBuffer>(IndexBuffer());
-
+    
     m_data.m_vao->Bind();
 
     m_data.m_vbo->SetData(m_data.m_pmdModel->get_vertices().data(), m_data.m_pmdModel->get_vertices().size() * sizeof(PMDVertex));
@@ -86,17 +86,6 @@ void Renderer::Render()
         glUniform3f(glGetUniformLocation(shaderProgram, "material.diffuse"), material.diffuse.x, material.diffuse.y, material.diffuse.z);
         glUniform3f(glGetUniformLocation(shaderProgram, "material.specular"), material.specular.x, material.specular.y, material.specular.z);
         glUniform1f(glGetUniformLocation(shaderProgram, "material.shininess"), material.specularity); // スペキュラの強さ
-
-        std::string texturePath = m_data.m_pmdModel->ResolveTexPath(material.getTexturePath());
-        Texture tex;
-        tex.GenerateFromImage(texturePath);
-        GLuint textureID = tex.GetTextureID();
-        
-        bool materialHasTexture = (textureID != 0);
-
-        glUniform1i(glGetUniformLocation(shaderProgram, "useTexture"), materialHasTexture ? 1 : 0);
-        
-        glBindTexture(GL_TEXTURE_2D, textureID);
 
         // 描画
         glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(material.indicesNum), GL_UNSIGNED_SHORT, (void*)(indexOffset * sizeof(GLushort)));

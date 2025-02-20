@@ -96,7 +96,7 @@ private:
     std::string m_filePath;
     std::map<std::string, BoneNode> m_boneNodeTable;
     std::vector<glm::mat4x4> m_boneMatrices;
-
+    
     void loadPMD(std::string& filePath);
     void changeNodeTable();
     void recursiveMatrixMultiply(BoneNode* node, glm::mat4 mat);
