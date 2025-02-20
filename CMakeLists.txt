@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.14)
 project(PMD_VIEWER)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # 初回ビルド時に Git サブモジュールを初期化・更新
 execute_process(
@@ -10,7 +12,7 @@ execute_process(
 )
 
 # 実行ファイルを設定
-set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Shader.cpp src/Renderer.cpp)
+set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Shader.cpp src/Renderer.cpp src/Render/VertexArray.cpp src/Render/VertexBuffer.cpp src/Render/IndexBuffer.cpp src/Render/Texture.cpp src/Render/Render.cpp)
 add_executable(PMD_VIEWER ${SOURCE_FILES})
 
 # --- SDL2 の設定 ---

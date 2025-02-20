@@ -1,6 +1,7 @@
 #include "Application.h"
 #include "PMDModel.h"
-#include "Renderer.h"
+// #include "Renderer.h"
+#include "Render/Render.h"
 #include "Shader.h"
 #include <string>
 #include <spdlog/spdlog.h>
@@ -63,7 +64,8 @@ void Application::run()
     std::string vertexPath = "shader/vertex_shader.glsl";
     std::string fragmentPath = "shader/fragment_shader.glsl";
     Shader shader = Shader(vertexPath, fragmentPath);
-    Renderer renderer = Renderer(miku, shader);
+    // Renderer renderer = Renderer(miku, shader);
+    Renderer render;
 
     // 背景を白に
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -83,7 +85,7 @@ void Application::run()
                 m_isRunning = false;
         }
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        renderer.render();
+        render.Render();
         SDL_GL_SwapWindow(m_window);
     }
 

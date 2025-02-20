@@ -18,7 +18,7 @@ public:
     void Bind() const;
     static void Unbind();
 
-    void SetData(const void* data, size_t size, GLenum usage = GL_STATIC_DRAW);
+    void SetData(const void* vertices_data, size_t vertices_size, GLenum usage = GL_STATIC_DRAW);
 private:
     GLuint m_vbo{};
 };

@@ -11,6 +11,11 @@ Texture::Texture()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 }
 
+Texture::~Texture()
+{
+    glDeleteTextures(1, &m_Texture);
+}
+
 Texture::Texture(Texture&& other) noexcept
     :m_Texture(other.m_Texture)
 {

@@ -16,7 +16,7 @@ VertexBuffer::VertexBuffer(VertexBuffer&& other) noexcept
     other.m_vbo = 0;
 }
 
-VertexBuffer& VertexBuffer::operator=(VertexBuffer&& other)
+VertexBuffer& VertexBuffer::operator=(VertexBuffer&& other) noexcept
 {
     if (this != &other) // 自己代入チェック
     {

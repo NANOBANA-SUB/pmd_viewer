@@ -18,7 +18,7 @@ public:
     void Bind() const;
     static void Unbind();
 
-    void SetData(const void* data, size_t size, GLenum usage = GL_STATIC_DRAW);
+    void SetData(const void* indices_data, size_t indices_size, GLenum usage = GL_STATIC_DRAW);
 private:
     GLuint m_ebo{};
 };

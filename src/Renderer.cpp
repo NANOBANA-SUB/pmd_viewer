@@ -115,6 +115,7 @@ void Renderer::render()
 
     // 累積オフセット
     size_t indexOffset = 0;
+    
 
     for (const auto& material : m_model.get_materials()) 
     {
