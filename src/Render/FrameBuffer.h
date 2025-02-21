@@ -19,7 +19,7 @@ public:
     void Bind() const;
     static void Unbind();
 
-    std::unique_ptr<Texture>& GetFrameTexture();
+    const std::unique_ptr<Texture>& GetFrameTexture() const;
 private:
     GLuint m_fbo{}, m_rbo{};
     std::unique_ptr<Texture> m_texture;

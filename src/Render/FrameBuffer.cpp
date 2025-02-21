@@ -32,7 +32,7 @@ void FrameBuffer::AttachTexture(int width, int height)
 	glBindRenderbuffer(GL_RENDERBUFFER, 0);
 }
 
-std::unique_ptr<Texture>& FrameBuffer::GetFrameTexture()
+const std::unique_ptr<Texture>& FrameBuffer::GetFrameTexture() const
 {
     return m_texture;
 }

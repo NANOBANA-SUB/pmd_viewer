@@ -82,6 +82,7 @@ public:
     
     std::string ResolveTexPath(const std::string& relativeTexPath);
 
+    const std::string& get_modelName() const { return m_header.model_name; }
     const std::vector<PMDVertex>& get_vertices() const { return m_vertices; }
     const std::vector<uint16_t>& get_indices() const { return m_indices; }
     const std::vector<PMDMaterial>& get_materials() const { return m_materials; }
