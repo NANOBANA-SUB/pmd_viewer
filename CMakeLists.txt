@@ -12,7 +12,7 @@ execute_process(
 )
 
 # 実行ファイルを設定
-set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Shader.cpp src/Render/VertexArray.cpp src/Render/VertexBuffer.cpp src/Render/IndexBuffer.cpp src/Render/Texture.cpp src/Render/Render.cpp)
+set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Render/Shader.cpp src/Render/VertexArray.cpp src/Render/VertexBuffer.cpp src/Render/IndexBuffer.cpp src/Render/Texture.cpp src/Render/Render.cpp src/Render/FrameBuffer.cpp)
 add_executable(PMD_VIEWER ${SOURCE_FILES})
 
 # --- SDL2 の設定 ---

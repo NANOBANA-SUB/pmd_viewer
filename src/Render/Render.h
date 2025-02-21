@@ -8,7 +8,7 @@
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
 #include "Texture.h"
-#include "../Shader.h"
+#include "Shader.h"
 #include "../PMDModel.h"
 
 struct RendererData
