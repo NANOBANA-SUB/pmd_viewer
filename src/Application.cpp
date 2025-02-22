@@ -7,6 +7,8 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/basic_file_sink.h>
+#include <backends/imgui_impl_sdl2.h>
+#include "Viewer/GUI.h"
 
 bool Application::isInitialize()
 {
@@ -50,6 +52,8 @@ bool Application::isInitialize()
     m_glContext = SDL_GL_CreateContext(m_window);
     glewInit();
 
+    GUI::Init(m_window, &m_glContext);
+
     spdlog::get("basic_logger")->info("Application is Initialized.");
     spdlog::get("basic_logger")->info("OpenGL Version: {}", reinterpret_cast<const char*>(glGetString(GL_VERSION)));
     return true;
@@ -67,27 +71,28 @@ void Application::run()
     // Renderer renderer = Renderer(miku, shader);
     Renderer render;
 
-    // 背景を白に
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-
-    // Zバッファ有効
-    glEnable(GL_DEPTH_TEST);
-
     SDL_Event event;
 
     while (m_isRunning)
     {
+        GUI::Run();
         while (SDL_PollEvent(&event))
         {
+            ImGui_ImplSDL2_ProcessEvent(&event);
+
             if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
                 m_isRunning = false;
             if (event.type == SDL_QUIT)
                 m_isRunning = false;
         }
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        // glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         render.Render();
+        GUI::Render(*render.GetData().m_fbo);
         SDL_GL_SwapWindow(m_window);
     }
+
+    GUI::Shutdown();
 
     SDL_GL_DeleteContext(m_glContext);
     SDL_DestroyWindow(m_window);

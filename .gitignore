@@ -28,6 +28,7 @@ Thumbs.db
 
 # CMake関連ファイル
 CMakeFiles/
+CMakeCache.txt
 cmake_install.cmake
 Makefile
 

@@ -179,6 +179,16 @@ void GUI::ShowScene(const FrameBuffer& sceneBuffer)
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{0, 0});
     ImGui::Begin(ICON_FA_CLAPPERBOARD" Scene");
     {
+        // 現在のウィンドウの描画可能サイズを取得
+        ImVec2 availableSize = ImGui::GetContentRegionAvail();
+        int width = sceneBuffer.GetFrameTexture()->GetWidth();
+        int height = sceneBuffer.GetFrameTexture()->GetHeight();
+        if (width != static_cast<int>(availableSize.x) ||
+            height != static_cast<int>(availableSize.y))
+            {
+                sceneBuffer.RescaleFrameBuffer(availableSize.x, availableSize.y);
+            }
+
         ImGui::Image(
             (ImTextureID)sceneBuffer.GetFrameTexture()->GetTextureID(),
             ImGui::GetContentRegionAvail(),
