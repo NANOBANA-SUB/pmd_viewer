@@ -44,7 +44,7 @@ std::string Utf8ToShiftJis(const std::string& utf8_str) {
 #include <iconv.h>
 #include <stdexcept>
 
-std::string ConvertEncoding(const std::string& input, const char* from_enc, const char* to_enc) {
+inline std::string ConvertEncoding(const std::string& input, const char* from_enc, const char* to_enc) {
     iconv_t cd = iconv_open(to_enc, from_enc);
     if (cd == (iconv_t)-1) {
         throw std::runtime_error("iconv_open failed");
@@ -71,11 +71,11 @@ std::string ConvertEncoding(const std::string& input, const char* from_enc, cons
     return output;
 }
 
-std::string ShiftJisToUtf8(const std::string& shift_jis_str) {
+inline std::string ShiftJisToUtf8(const std::string& shift_jis_str) {
     return ConvertEncoding(shift_jis_str, "SHIFT_JIS", "UTF-8");
 }
 
-std::string Utf8ToShiftJis(const std::string& utf8_str) {
+inline std::string Utf8ToShiftJis(const std::string& utf8_str) {
     return ConvertEncoding(utf8_str, "UTF-8", "SHIFT_JIS");
 }
 

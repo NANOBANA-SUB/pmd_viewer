@@ -30,7 +30,7 @@ public:
     void Init();
     void Render();
 
-    const RendererData& GetData() const { return m_data; }
+    RendererData& GetData() { return m_data; }
 
 private:
     RendererData m_data;

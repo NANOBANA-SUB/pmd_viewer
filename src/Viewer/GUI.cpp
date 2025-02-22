@@ -1,6 +1,7 @@
 #include <backends/imgui_impl_sdl2.h>
 #include <backends/imgui_impl_opengl3.h>
 #include "GUI.h"
+#include "../ShiftJis.h"
 
 std::string GUI::s_log;
 ImVec4* GUI::s_styleColors;
@@ -26,10 +27,10 @@ void GUI::LoadConfigs()
 
     io.IniFilename = "imgui.ini";
 
-    float baseFontSize = 14.0f;
+    float baseFontSize = 18.0f;
     float iconFontSize = baseFontSize * 2.0f / 2.4f; // FontAwesome fonts need to have their sizes reduced by 2.0f/3.0f in order to align correctly
 
-    io.Fonts->AddFontFromFileTTF("fonts/Ruda-Bold.ttf", baseFontSize);
+    io.Fonts->AddFontFromFileTTF("fonts/NotoSansJP-Regular.ttf", baseFontSize, nullptr, io.Fonts->GetGlyphRangesJapanese());
 
     static const ImWchar iconsRanges[] = { ICON_MIN_FA, ICON_MAX_16_FA, 0 };
     ImFontConfig iconsConfig;
@@ -90,11 +91,11 @@ void GUI::Run()
     ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
 }
 
-void GUI::Render(const FrameBuffer& sceneBuffer)
+void GUI::Render(const FrameBuffer& sceneBuffer, RendererData& data)
 {
     ShowConsole();
-    ShowEntities();
-    ShowProperties();
+    ShowEntities(data);
+    ShowProperties(data);
     ShowMenu();
     ShowFiles();
     ShowScene(sceneBuffer);
@@ -119,14 +120,14 @@ void GUI::ShowConsole()
 {
     ImGui::Begin(ICON_FA_TERMINAL" Console");
 
-    if(ImGui::Button("Clear"))
+    if (ImGui::Button("Clear"))
     {
         s_log.clear();
     }
 
     ImGui::SameLine();
 
-    if(ImGui::Button("Debug"))
+    if (ImGui::Button("Debug"))
     {
         Print("Debug message");
     }
@@ -138,25 +139,48 @@ void GUI::ShowConsole()
     ImGui::End();
 }
 
-void GUI::ShowEntities()
+void GUI::ShowEntities(RendererData& data)
 {
     ImGui::Begin(ICON_FA_CUBE" Entities");
 
+    if (data.m_pmdModel != nullptr)
+    {
+        std::string modelName = ShiftJisToUtf8(data.m_pmdModel->get_pmdHeader().model_name);
+        ImGui::CollapsingHeader(modelName.c_str());
+    }
     ImGui::End();
 }
 
-void GUI::ShowProperties()
+void GUI::ShowProperties(RendererData& data)
 {
     ImGui::Begin(ICON_FA_BARS_STAGGERED" Properties");
 
+    if (ImGui::CollapsingHeader("Transform"))
+    {
+        ImGui::BeginGroup();
+        glm::vec3 position = data.m_pmdModel->get_position();
+        glm::vec3 rotation = data.m_pmdModel->get_rotation();
+
+        // 変更を受け取るためのfloat配列
+        float pos[3] = { position.x, position.y, position.z };
+        float rot[3] = { rotation.x, rotation.y, rotation.z };
+        
+        // ImGui の DragFloat3 に渡す
+        if (ImGui::DragFloat3("Position", pos, 0.2f))
+            data.m_pmdModel->set_position(glm::vec3(pos[0], pos[1], pos[2]));
+        if (ImGui::DragFloat3("Rotation", rot, 0.2f)) 
+            data.m_pmdModel->set_rotation(glm::vec3(rot[0], rot[1], rot[2]));
+        
+        ImGui::EndGroup();
+    }
     ImGui::End();
 }
 
 void GUI::ShowMenu()
 {
-    if(ImGui::BeginMainMenuBar())
+    if (ImGui::BeginMainMenuBar())
     {
-        if(ImGui::BeginMenu("File"))
+        if (ImGui::BeginMenu("File"))
         {
             if (ImGui::MenuItem("Open..", "Ctrl+O")) { }
             if (ImGui::MenuItem("Save", "Ctrl+S"))   { }
@@ -179,16 +203,6 @@ void GUI::ShowScene(const FrameBuffer& sceneBuffer)
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{0, 0});
     ImGui::Begin(ICON_FA_CLAPPERBOARD" Scene");
     {
-        // 現在のウィンドウの描画可能サイズを取得
-        ImVec2 availableSize = ImGui::GetContentRegionAvail();
-        int width = sceneBuffer.GetFrameTexture()->GetWidth();
-        int height = sceneBuffer.GetFrameTexture()->GetHeight();
-        if (width != static_cast<int>(availableSize.x) ||
-            height != static_cast<int>(availableSize.y))
-            {
-                sceneBuffer.RescaleFrameBuffer(availableSize.x, availableSize.y);
-            }
-
         ImGui::Image(
             (ImTextureID)sceneBuffer.GetFrameTexture()->GetTextureID(),
             ImGui::GetContentRegionAvail(),

@@ -63,12 +63,6 @@ void Application::run()
 {
     if (!isInitialize()) return;
 
-    std::string filePath = "model/miku.pmd";
-    PMDModel miku = PMDModel(filePath);
-    std::string vertexPath = "shader/vertex_shader.glsl";
-    std::string fragmentPath = "shader/fragment_shader.glsl";
-    Shader shader = Shader(vertexPath, fragmentPath);
-    // Renderer renderer = Renderer(miku, shader);
     Renderer render;
 
     SDL_Event event;
@@ -85,10 +79,8 @@ void Application::run()
             if (event.type == SDL_QUIT)
                 m_isRunning = false;
         }
-
-        // glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         render.Render();
-        GUI::Render(*render.GetData().m_fbo);
+        GUI::Render(*render.GetData().m_fbo, render.GetData());
         SDL_GL_SwapWindow(m_window);
     }
 
