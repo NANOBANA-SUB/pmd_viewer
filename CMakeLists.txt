@@ -61,6 +61,25 @@ else()
     target_link_libraries(PMD_VIEWER PRIVATE ${ICONV_LIBRARY})
 endif()
 
+# --- ImGuiの設定 ---
+set(IMGUI_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/imgui)
+
+set(IMGUI_SOURCES
+    ${IMGUI_SOURCE_DIR}/imgui.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_draw.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_tables.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_widgets.cpp
+    ${IMGUI_SOURCE_DIR}/backends/imgui_impl_sdl2.cpp
+    ${IMGUI_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_include_directories(PMD_VIEWER PRIVATE
+    ${IMGUI_SOURCE_DIR}
+    ${IMGUI_SOURCE_DIR}/backends
+)
+
+target_sources(PMD_VIEWER PRIVATE ${IMGUI_SOURCES})
+
 # --- OpenGL の設定 ---
 if(APPLE)
     find_library(OpenGL_LIBRARY OpenGL)

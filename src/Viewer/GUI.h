@@ -1,11 +1,11 @@
 #ifndef GUI_H
 #define GUI_H
 
-#include "FrameBuffer.h"
+#include "../Render/FrameBuffer.h"
 #include <SDL.h>
 #include <imgui.h>
 #include <string>
-#include <IconsFontAwesome6.h>
+#include "../Viewer/IconsFontAwesome6.h"
 
 class GUI
 {
