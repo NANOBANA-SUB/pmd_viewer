@@ -7,7 +7,7 @@
 #ifdef _WIN32
 #include <windows.h>
 
-std::string ShiftJisToUtf8(const std::string& shift_jis_str) {
+inline std::string ShiftJisToUtf8(const std::string& shift_jis_str) {
     if (shift_jis_str.empty()) return "";
 
     // MultiByteToWideCharの変換サイズ取得（NULL終端なし）
@@ -27,7 +27,7 @@ std::string ShiftJisToUtf8(const std::string& shift_jis_str) {
     return utf8_str;
 }
 
-std::string Utf8ToShiftJis(const std::string& utf8_str) {
+inline std::string Utf8ToShiftJis(const std::string& utf8_str) {
     int wide_size = MultiByteToWideChar(CP_UTF8, 0, utf8_str.c_str(), -1, nullptr, 0);
     std::wstring wide_str(wide_size, 0);
     MultiByteToWideChar(CP_UTF8, 0, utf8_str.c_str(), -1, &wide_str[0], wide_size);
