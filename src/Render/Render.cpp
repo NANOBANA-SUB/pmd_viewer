@@ -36,6 +36,10 @@ void Renderer::SetupBuffers()
     VertexArray::Unbind();
     VertexBuffer::Unbind();
     IndexBuffer::Unbind();
+
+    m_data.m_fbo = std::make_unique<FrameBuffer>();
+    m_data.m_fbo->AttachTexture(1270, 720);
+    FrameBuffer::Unbind();
 }
 
 GLuint Renderer::LoadTexture(const std::string& texturePath)
@@ -82,13 +86,24 @@ GLuint Renderer::GetOrLoadTexture(const std::string& texturePath)
 
 void Renderer::Render()
 {
+    m_data.m_fbo->Bind();
+
     GLuint shaderProgram = m_data.m_shader->getSheaderProgram();
     glUseProgram(shaderProgram);
+
+    glEnable(GL_DEPTH_TEST);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // シェーダに行列を設定
     glm::mat4 rotation_y = glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 rotation_x = glm::rotate(glm::mat4(1.0f), glm::radians(20.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-    glm::mat4 model = rotation_x * rotation_y * glm::mat4(1.0f);
+    glm::mat4 model = rotation_x * rotation_y * glm::mat4(1.0f); // 角度を微調整
+
+    model = glm::translate(model, m_data.m_pmdModel->get_position());
+    if (glm::length(m_data.m_pmdModel->get_rotation()) != 0)
+        model = glm::rotate(model, glm::radians(length(m_data.m_pmdModel->get_rotation())), glm::normalize(m_data.m_pmdModel->get_rotation()));
+    
     glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 30.0f), glm::vec3(0.0f, 10.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     float aspectRatio = 1270.0f / 720.0f;
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), aspectRatio, 0.1f, 100.0f);
@@ -145,9 +160,8 @@ void Renderer::Render()
         // 次のオフセットを計算
         indexOffset += material.indicesNum;
     }
-
     m_data.m_vao->Unbind();
-
+    FrameBuffer::Unbind();
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
     glDisableVertexAttribArray(2);

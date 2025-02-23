@@ -12,7 +12,7 @@ execute_process(
 )
 
 # 実行ファイルを設定
-set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Render/Shader.cpp src/Render/VertexArray.cpp src/Render/VertexBuffer.cpp src/Render/IndexBuffer.cpp src/Render/Texture.cpp src/Render/Render.cpp src/Render/FrameBuffer.cpp)
+set(SOURCE_FILES src/main.cpp src/Application.cpp src/PMDModel.cpp src/Render/Shader.cpp src/Render/VertexArray.cpp src/Render/VertexBuffer.cpp src/Render/IndexBuffer.cpp src/Render/Texture.cpp src/Render/Render.cpp src/Render/FrameBuffer.cpp src/Viewer/GUI.cpp)
 add_executable(PMD_VIEWER ${SOURCE_FILES})
 
 # --- SDL2 の設定 ---
@@ -60,6 +60,25 @@ else()
     endif()
     target_link_libraries(PMD_VIEWER PRIVATE ${ICONV_LIBRARY})
 endif()
+
+# --- ImGuiの設定 ---
+set(IMGUI_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/imgui)
+
+set(IMGUI_SOURCES
+    ${IMGUI_SOURCE_DIR}/imgui.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_draw.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_tables.cpp
+    ${IMGUI_SOURCE_DIR}/imgui_widgets.cpp
+    ${IMGUI_SOURCE_DIR}/backends/imgui_impl_sdl2.cpp
+    ${IMGUI_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_include_directories(PMD_VIEWER PRIVATE
+    ${IMGUI_SOURCE_DIR}
+    ${IMGUI_SOURCE_DIR}/backends
+)
+
+target_sources(PMD_VIEWER PRIVATE ${IMGUI_SOURCES})
 
 # --- OpenGL の設定 ---
 if(APPLE)

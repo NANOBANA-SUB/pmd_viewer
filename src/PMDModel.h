@@ -82,11 +82,17 @@ public:
     
     std::string ResolveTexPath(const std::string& relativeTexPath);
 
+    const PMDHeader& get_pmdHeader() const { return m_header; }
     const std::vector<PMDVertex>& get_vertices() const { return m_vertices; }
     const std::vector<uint16_t>& get_indices() const { return m_indices; }
     const std::vector<PMDMaterial>& get_materials() const { return m_materials; }
     const std::string& get_filePath() const { return m_filePath; }
     const std::vector<glm::mat4x4> get_boneMatrices() const { return m_boneMatrices; }
+    const glm::vec3& get_position() const { return m_position; }
+    const glm::vec3& get_rotation() const { return m_rotation; }
+
+    void set_position(const glm::vec3& position) { m_position = position; }
+    void set_rotation(const glm::vec3& rotation) { m_rotation = rotation; }
 private:
     PMDHeader m_header;                     // ヘッダ
     std::vector<PMDVertex> m_vertices;      // 頂点データのリスト
@@ -96,6 +102,8 @@ private:
     std::string m_filePath;
     std::map<std::string, BoneNode> m_boneNodeTable;
     std::vector<glm::mat4x4> m_boneMatrices;
+    glm::vec3 m_position = glm::vec3{0.0f, 0.0f, 0.0f};
+    glm::vec3 m_rotation = glm::vec3{0.0f, 0.0f, 0.0f};
     
     void loadPMD(std::string& filePath);
     void changeNodeTable();
