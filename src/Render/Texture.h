@@ -23,6 +23,7 @@ public:
     void GenerateFromImage(const std::string imagePath);
 
     GLuint GetTextureID() const { return m_Texture; }
+    
     int GetWidth() const { return m_Width; }
     int GetHeight() const { return m_Height; }
     int GetNrChannels() const { return m_NrChannels; }

@@ -1,9 +1,11 @@
 #include <backends/imgui_impl_sdl2.h>
 #include <backends/imgui_impl_opengl3.h>
+#include <nfd.h>
 #include "GUI.h"
 #include "../ShiftJis.h"
 
 std::string GUI::s_log;
+std::string GUI::s_selectModelPath;
 ImVec4* GUI::s_styleColors;
 
 GUI::GUI(){}
@@ -91,12 +93,12 @@ void GUI::Run()
     ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
 }
 
-void GUI::Render(const FrameBuffer& sceneBuffer, RendererData& data)
+void GUI::Render(const FrameBuffer& sceneBuffer, Renderer& render)
 {
     ShowConsole();
-    ShowEntities(data);
-    ShowProperties(data);
-    ShowMenu();
+    ShowEntities(render);
+    ShowProperties(render);
+    ShowMenu(render);
     ShowFiles();
     ShowScene(sceneBuffer);
 
@@ -139,27 +141,27 @@ void GUI::ShowConsole()
     ImGui::End();
 }
 
-void GUI::ShowEntities(RendererData& data)
+void GUI::ShowEntities(Renderer& render)
 {
     ImGui::Begin(ICON_FA_CUBE" Entities");
 
-    if (data.m_pmdModel != nullptr)
+    std::string modelName = ShiftJisToUtf8(render.GetData().m_pmdModel->get_pmdHeader().model_name);
+    if (!modelName.empty())
     {
-        std::string modelName = ShiftJisToUtf8(data.m_pmdModel->get_pmdHeader().model_name);
         ImGui::CollapsingHeader(modelName.c_str());
     }
     ImGui::End();
 }
 
-void GUI::ShowProperties(RendererData& data)
+void GUI::ShowProperties(Renderer& render)
 {
     ImGui::Begin(ICON_FA_BARS_STAGGERED" Properties");
 
     if (ImGui::CollapsingHeader("Transform"))
     {
         ImGui::BeginGroup();
-        glm::vec3 position = data.m_pmdModel->get_position();
-        glm::vec3 rotation = data.m_pmdModel->get_rotation();
+        glm::vec3 position = render.GetData().m_pmdModel->get_position();
+        glm::vec3 rotation = render.GetData().m_pmdModel->get_rotation();
 
         // 変更を受け取るためのfloat配列
         float pos[3] = { position.x, position.y, position.z };
@@ -167,22 +169,33 @@ void GUI::ShowProperties(RendererData& data)
         
         // ImGui の DragFloat3 に渡す
         if (ImGui::DragFloat3("Position", pos, 0.2f))
-            data.m_pmdModel->set_position(glm::vec3(pos[0], pos[1], pos[2]));
+            render.GetData().m_pmdModel->set_position(glm::vec3(pos[0], pos[1], pos[2]));
         if (ImGui::DragFloat3("Rotation", rot, 0.2f)) 
-            data.m_pmdModel->set_rotation(glm::vec3(rot[0], rot[1], rot[2]));
+            render.GetData().m_pmdModel->set_rotation(glm::vec3(rot[0], rot[1], rot[2]));
         
         ImGui::EndGroup();
     }
     ImGui::End();
 }
 
-void GUI::ShowMenu()
+void GUI::ShowMenu(Renderer& render)
 {
     if (ImGui::BeginMainMenuBar())
     {
         if (ImGui::BeginMenu("File"))
         {
-            if (ImGui::MenuItem("Open..", "Ctrl+O")) { }
+            if (ImGui::MenuItem("Open..", "Ctrl+O")) 
+            {
+                nfdchar_t *outPath = NULL;
+                const nfdchar_t *filterList = "pmd";
+                if (NFD_OpenDialog(filterList, NULL, &outPath))
+                {
+                    GUI::s_selectModelPath = std::string(outPath);
+                    Print("Selected file: " + std::string(outPath));
+                    render.Init();
+                    free(outPath);
+                }
+            }
             if (ImGui::MenuItem("Save", "Ctrl+S"))   { }
             if (ImGui::MenuItem("Close", "Ctrl+W"))  { }
             ImGui::EndMenu();

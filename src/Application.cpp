@@ -1,6 +1,5 @@
 #include "Application.h"
 #include "PMDModel.h"
-// #include "Renderer.h"
 #include "Render/Render.h"
 #include "Render/Shader.h"
 #include <string>
@@ -52,6 +51,10 @@ bool Application::isInitialize()
     m_glContext = SDL_GL_CreateContext(m_window);
     glewInit();
 
+    // V-Syncを有効化 (1: 有効, 0: 無効, -1: Adaptive V-Sync (対応しているGPUのみ))
+    SDL_GL_SetSwapInterval(1);
+
+
     GUI::Init(m_window, &m_glContext);
 
     spdlog::get("basic_logger")->info("Application is Initialized.");
@@ -80,7 +83,7 @@ void Application::run()
                 m_isRunning = false;
         }
         render.Render();
-        GUI::Render(*render.GetData().m_fbo, render.GetData());
+        GUI::Render(*render.GetData().m_fbo, render);
         SDL_GL_SwapWindow(m_window);
     }
 

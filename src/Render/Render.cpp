@@ -1,6 +1,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include "Render.h"
+#include "../Viewer/GUI.h"
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
@@ -18,6 +19,11 @@ void Renderer::Init()
 void Renderer::SetVariables()
 {
     std::string filePath = "model/miku.pmd";
+
+    // 古いデータの開放
+    m_data.m_pmdModel.reset();
+    m_data.m_shader.reset();
+
     m_data.m_pmdModel = std::make_unique<PMDModel>(PMDModel(filePath));
     m_data.m_shader = std::make_unique<Shader>(Shader("shader/vertex_shader.glsl", "shader/fragment_shader.glsl"));
 }

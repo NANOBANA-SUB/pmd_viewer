@@ -80,6 +80,16 @@ target_include_directories(PMD_VIEWER PRIVATE
 
 target_sources(PMD_VIEWER PRIVATE ${IMGUI_SOURCES})
 
+# nfd を手動で追加する
+file(GLOB NFD_SRC
+    third_party/nativefiledialog/src/nfd_common.c
+    third_party/nativefiledialog/src/nfd_cocoa.m  # macOS の場合
+)
+add_library(nfd STATIC ${NFD_SRC})
+target_include_directories(nfd PUBLIC third_party/nativefiledialog/src/include)
+
+target_link_libraries(PMD_VIEWER PRIVATE nfd)
+
 # --- OpenGL の設定 ---
 if(APPLE)
     find_library(OpenGL_LIBRARY OpenGL)
