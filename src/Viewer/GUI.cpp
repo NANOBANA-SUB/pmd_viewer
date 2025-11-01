@@ -100,7 +100,7 @@ void GUI::Render(const FrameBuffer& sceneBuffer, Renderer& render)
     ShowProperties(render);
     ShowMenu(render);
     ShowFiles();
-    ShowScene(sceneBuffer);
+    ShowScene(*render.GetData().m_fbo);
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -192,7 +192,7 @@ void GUI::ShowMenu(Renderer& render)
                 {
                     GUI::s_selectModelPath = std::string(outPath);
                     Print("Selected file: " + std::string(outPath));
-                    render.Init();
+                    render.Init(outPath);
                     free(outPath);
                 }
             }

@@ -21,7 +21,7 @@ VertexBuffer& VertexBuffer::operator=(VertexBuffer&& other) noexcept
 {
     if (this != &other) // 自己代入チェック
     {
-        glDeleteBuffers(1, &m_vbo);
+        if (m_vbo) glDeleteBuffers(1, &m_vbo);
         m_vbo = other.m_vbo;
         other.m_vbo = 0;
     }

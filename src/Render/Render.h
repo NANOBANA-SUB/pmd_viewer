@@ -28,6 +28,8 @@ public:
     Renderer();
 
     void Init();
+    void Init(std::string filePath);
+
     void Render();
 
     RendererData& GetData() { return m_data; }
@@ -37,7 +39,11 @@ private:
     std::unordered_map<std::string, GLuint> m_textureCache;
 
     void SetVariables();
+    void SetVariables(std::string filePath);
+
     void SetupBuffers();
+
+    void ResetGPUResources();
 
     GLuint LoadTexture(const std::string& texturePath);
     GLuint GetOrLoadTexture(const std::string& texturePath);

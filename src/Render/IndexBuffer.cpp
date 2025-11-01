@@ -20,7 +20,7 @@ IndexBuffer& IndexBuffer::operator=(IndexBuffer&& other) noexcept
 {
     if (this != &other)
     {
-        glDeleteBuffers(1, &m_ebo);
+        if (m_ebo) glDeleteBuffers(1, &m_ebo);
         m_ebo = other.m_ebo;
         other.m_ebo = 0;
     }

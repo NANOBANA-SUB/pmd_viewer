@@ -12,18 +12,46 @@ Renderer::Renderer()
 
 void Renderer::Init()
 {
+    ResetGPUResources();
     SetVariables();
     SetupBuffers();
 }
 
+void Renderer::Init(std::string filePath)
+{
+    ResetGPUResources();
+    SetVariables(filePath);
+    SetupBuffers();
+}
+
+void Renderer::ResetGPUResources()
+{
+    // アンバインド
+    m_data.m_vao->Unbind();
+    m_data.m_vbo->Unbind();
+    m_data.m_ebo->Unbind();
+    m_data.m_fbo->Unbind();
+
+    // リソース解放
+    m_data.m_vao.reset();
+    m_data.m_vbo.reset();
+    m_data.m_ebo.reset();
+    m_data.m_fbo.reset();
+    m_data.m_shader.reset();
+    m_data.m_pmdModel.reset();
+    m_textureCache.clear();
+}
+
 void Renderer::SetVariables()
 {
-    std::string filePath = "model/miku.pmd";
+    std::string filePath;
 
-    // 古いデータの開放
-    m_data.m_pmdModel.reset();
-    m_data.m_shader.reset();
+    m_data.m_pmdModel = std::make_unique<PMDModel>(PMDModel(filePath));
+    m_data.m_shader = std::make_unique<Shader>(Shader("shader/vertex_shader.glsl", "shader/fragment_shader.glsl"));
+}
 
+void Renderer::SetVariables(std::string filePath)
+{
     m_data.m_pmdModel = std::make_unique<PMDModel>(PMDModel(filePath));
     m_data.m_shader = std::make_unique<Shader>(Shader("shader/vertex_shader.glsl", "shader/fragment_shader.glsl"));
 }
@@ -35,8 +63,11 @@ void Renderer::SetupBuffers()
     m_data.m_ebo = std::make_unique<IndexBuffer>(IndexBuffer());
     
     m_data.m_vao->Bind();
+    m_data.m_vbo->Bind();
 
     m_data.m_vbo->SetData(m_data.m_pmdModel->get_vertices().data(), m_data.m_pmdModel->get_vertices().size() * sizeof(PMDVertex));
+
+    m_data.m_ebo->Bind();
     m_data.m_ebo->SetData(m_data.m_pmdModel->get_indices().data(), m_data.m_pmdModel->get_indices().size() * sizeof(uint16_t));
 
     VertexArray::Unbind();

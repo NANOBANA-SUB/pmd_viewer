@@ -26,7 +26,7 @@ Texture& Texture::operator=(Texture&& other) noexcept
 {
     if (this != &other)
     {
-        glDeleteTextures(1, &m_Texture);
+        if(m_Texture) glDeleteTextures(1, &m_Texture);
         m_Texture = other.m_Texture;
         other.m_Texture = 0;
     }

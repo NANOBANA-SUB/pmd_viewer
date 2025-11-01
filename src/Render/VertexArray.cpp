@@ -20,7 +20,7 @@ VertexArray& VertexArray::operator=(VertexArray&& other) noexcept
 {
     if (this != &other)
     {
-        glDeleteVertexArrays(1, &m_vao);
+        if (m_vao) glDeleteVertexArrays(1, &m_vao);
         m_vao = other.m_vao;
         other.m_vao = 0;
     }
