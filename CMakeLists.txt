@@ -21,6 +21,11 @@ add_subdirectory(${SDL2_SOURCE_DIR} EXCLUDE_FROM_ALL)
 target_include_directories(PMD_VIEWER PRIVATE ${SDL2_SOURCE_DIR}/include)
 target_link_libraries(PMD_VIEWER PRIVATE SDL2-static SDL2main)
 
+# --- ImGuizmo の設定 ---
+set(IMGUIZO_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/ImGuizmo)
+target_sources(PMD_VIEWER PRIVATE ${IMGUIZO_SOURCE_DIR}/ImGuizmo.cpp)
+target_include_directories(PMD_VIEWER PRIVATE ${IMGUIZO_SOURCE_DIR})
+
 # --- GLEW の設定 ---
 if(APPLE)
     find_package(PkgConfig REQUIRED)
@@ -39,6 +44,7 @@ endif()
 # --- GLM の設定 ---
 set(GLM_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/glm)
 target_include_directories(PMD_VIEWER PRIVATE ${GLM_SOURCE_DIR})
+target_compile_definitions(PMD_VIEWER PRIVATE GLM_ENABLE_EXPERIMENTAL=1)
 
 # --- SPDLOG の設定 ---
 set(SPDLOG_SOURCE_DIR ${CMAKE_SOURCE_DIR}/third_party/spdlog)

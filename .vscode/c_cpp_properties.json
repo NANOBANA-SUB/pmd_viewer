@@ -10,6 +10,7 @@
                 "${workspaceFolder}/third_party/glew/include",
                 "${workspaceFolder}/third_party/spdlog/include",
                 "${workspaceFolder}/third_party/stb",
+                "${workspaceFolder}/third_party/ImGuizmo",
                 "${workspaceFolder}/third_party/nativefiledialog/src/include"
             ],
             "defines": [

@@ -4,6 +4,7 @@
 #include "../Render/FrameBuffer.h"
 #include <SDL.h>
 #include <imgui.h>
+#include <ImGuizmo.h>
 #include <string>
 #include "../Viewer/IconsFontAwesome6.h"
 #include "../Render/Render.h"
@@ -25,7 +26,7 @@ public:
     static void ShowEntities(Renderer& render);
     static void ShowFiles();
     static void ShowConsole();
-    static void ShowScene(const FrameBuffer& sceneBuffer);
+    static void ShowScene(Renderer& render);
     static void ShowProperties(Renderer& render);
 
     static std::string& GetModelPath() { return s_selectModelPath; }
@@ -35,5 +36,12 @@ private:
     static std::string s_log;
     static ImVec4* s_styleColors;
     static std::string s_selectModelPath;
+
+    static int   s_gizmoOperation;   // ImGuizmo::OPERATION
+    static int   s_gizmoMode;        // ImGuizmo::MODE
+    static bool  s_useSnap;
+    static float s_snapTranslate[3];
+    static float s_snapRotate;       // degrees
+    static float s_snapScale[3];
 };
 #endif // GUI_H
